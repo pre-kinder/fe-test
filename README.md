@@ -1,4 +1,7 @@
 # ReadMe
 
 # Update 1
-- Test :) 
+- Test :)
+
+# Update 2
+- Test PR Template Functionality
