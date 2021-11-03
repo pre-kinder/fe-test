@@ -1,0 +1,20 @@
+<h2>Teacher Dashboard</h2>
+
+<div class="forecast">
+<h4><strong>Weather Forecast</strong></h4>
+
+  <%= form_with url: teachers_dashboard_path, method: :get, locals: true do |f| %>
+  <%= f.text_field :q, placeholder: "enter city here" %>
+  <%= f.submit "Search" %>
+  <% end %>
+  <% if params[:q].present? %>
+    <% @forecast.each do |data| %>
+      <p>Icon: <%= data.icon %> </p>
+      <p>Temp: <%= data.temp %> </p>
+      <p>Description: <%= data.description %></p>
+      <p>Wind Speed: <%= data.wind_speed %></p>
+      <p>Datetime: <%= data.datetime %></p>
+    <% end %>
+  <% end %>
+
+</div>

@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'omniauth-google-oauth2'
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'pry'
