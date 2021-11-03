@@ -6,7 +6,7 @@
   <%= form_with url: teachers_dashboard_path, method: :get, locals: true do |f| %>
   <%= f.text_field :q, placeholder: "enter city here" %>
   <%= f.submit "Search" %>
-
+  <% end %>
   <% if params[:q].present? %>
     <% @forecast.each do |data| %>
       <p>Icon: <%= data.icon %> </p>
@@ -16,5 +16,5 @@
       <p>Datetime: <%= data.datetime %></p>
     <% end %>
   <% end %>
-  <% end %>
+
 </div>
