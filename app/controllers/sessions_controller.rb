@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_or_create_by(email: user_params[:email])
     session[:user_id] = user.id
-    redirect_to parent_dashboard_path
+    redirect_to register_path
   end
 
   def destroy
