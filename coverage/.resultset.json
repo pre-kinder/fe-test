@@ -40,7 +40,7 @@
           null
         ]
       },
-      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/parents_controller.rb": {
+      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/teachers_controller.rb": {
         "lines": [
           1,
           1,
@@ -74,6 +74,6 @@
         ]
       }
     },
-    "timestamp": 1636009098
+    "timestamp": 1636009714
   }
 }
