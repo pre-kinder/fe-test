@@ -3,8 +3,14 @@ class SessionsController < ApplicationController
 
   def create
     # @user = User.find_or_create_by(email: user_params[:email], first_name: user_params[:first_name], last_name: user_params[:last_name], google_id: user_params[:google_id])
-    @user = User.find_or_create_by(email: user_params[:email])
+
+    @user = User.find_or_create_by(email: user_params[:email])  #, first_name: user_params[:first_name], last_name: user_params[:last_name], token: user_params[:token], id: user_params[:google_id])
+    @user.update(first_name: user_params[:first_name], last_name: user_params[:last_name], token: user_params[:token])  #, id: user_params[:google_id])
+    # @current_user = @user
     session[:user_id] = @user.id
+
+    # binding.prys
+
     redirect_to register_path
   end
 

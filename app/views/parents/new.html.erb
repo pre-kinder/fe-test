@@ -3,10 +3,10 @@
     <h2>Parent Registeration Page</h2>
   </div>
 </div>
-
+<%= require "pry"; binding.pry %>
 <div class="container gray bottom-radius padding">
   <div class="row center-it-all">
-    <%= form_with url: parents_register_path(google_id: params[:uid], google_token: params[:token]), method: :post, local: true do |f| %>
+    <%= form_with(model: @parent, local: true, method: :post) do |f| %>
       <h5><%= f.label :first_name, 'First Name' %></h5>
       <%= f.text_field :first_name, value: params[:first_name], id: :first_name, class: "form-custom center-it-all" %>
 

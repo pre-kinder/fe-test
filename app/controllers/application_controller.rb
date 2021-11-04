@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   # def current_user
   #   # @current_user ||= GoogleUserFacade.user({roommate: session[:user].symbolize_keys}) if session[:user_id]
   #   User.find(session[:user_id]) if session[:user_id]
-  #
   # end
 
   # def authenticate_user
@@ -14,7 +13,8 @@ class ApplicationController < ActionController::Base
   # end
 
   def current_user
-    User.find(session[:user_id]) if session[:user_id]
-  end
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    binding.pry
 
+  end
 end
