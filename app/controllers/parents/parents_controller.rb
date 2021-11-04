@@ -1,11 +1,10 @@
-class ParentsController < ApplicationController
+class Parents::ParentsController < ApplicationController
   def index
   end
 
   def new
     # @parent = User.find_or_create_by(id: user_params[:email]
     # binding.pry
-    # <%= form_with url: parents_register_path(google_id: params[:uid], google_token: params[:token]), method: :post, local: true do |f| %>
   end
 
   def create

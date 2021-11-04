@@ -9,7 +9,6 @@
     <%= form_with(model: @parent, local: true, method: :post) do |f| %>
       <h5><%= f.label :first_name, 'First Name' %></h5>
       <%= f.text_field :first_name, value: params[:first_name], id: :first_name, class: "form-custom center-it-all" %>
-
       <br><br>
 
       <h5><%= f.label :last_name, 'Last Name' %></h5>
