@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get '/teachers/register', to: 'teachers#new'
   get '/teachers/:id/dashboard', to: 'teachers#show', as: 'teachers_dashboard'
   get '/teachers/:id/profile', to: 'teachers#edit', as: 'teachers_profile'
+
+  namespace :teachers do
+    get '/dashboard', to: 'dashboard#show'
+  end
 end
