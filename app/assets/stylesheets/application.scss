@@ -18,9 +18,11 @@
 .container{
   max-width: 1000px;
 }
+
 .navbar{
   border-bottom: 1px solid rgba(0,0,0,.0975);
 }
+
 .user-section{
   a{
     padding-left: 15px;
@@ -30,6 +32,7 @@
     color: #000000d4;
   }
 }
+
 .search-form{
   input{
     font-size: 13px;
@@ -86,4 +89,17 @@
      padding: 20px;
    }
  }
+}
+
+.card {
+  display: flex;
+  // flex-direction: row;
+  // display: inline-block;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }
