@@ -6,9 +6,9 @@ RSpec.describe 'Teacher Dashboard Page' do
 
     expect(page).to have_content('Teacher Dashboard')
     expect(page).to have_content('Weather Forecaset')
-    expect(page).to have_field(:query, placeholder: "enter city here")
+    expect(page).to have_field(:q, placeholder: "enter city here")
 
-    fill_in :query, with: 'Denver'
+    fill_in :q, with: 'Denver'
     click_on "Search"
 
     expect(page).to have_content('Icon:')

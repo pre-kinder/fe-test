@@ -1,7 +1,7 @@
 class TeachersController < ApplicationController
   def index
-    if params[:query].present?
-      @forecast = ForecastFacade.get_forecast(params[:query])
+    if params[:q].present?
+      @forecast = ForecastFacade.get_forecast(params[:q])
     else
       flash[:error] = 'Please enter a valid city'
     end

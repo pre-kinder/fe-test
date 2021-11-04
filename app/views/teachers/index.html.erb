@@ -4,10 +4,10 @@
 <h4><strong>Weather Forecast</strong></h4>
 
   <%= form_with url: teachers_dashboard_path, method: :get, locals: true do |f| %>
-  <%= f.text_field :query, placeholder: "enter city here" %>
+  <%= f.text_field :q, placeholder: "enter city here" %>
   <%= f.submit "Search" %>
   <% end %>
-  <% if params[:query].present? %>
+  <% if params[:q].present? %>
     <% @forecast.each do |data| %>
       <p>Icon: <%= data.icon %> </p>
       <p>Temp: <%= data.temp %> </p>
