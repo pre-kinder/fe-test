@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   get '/register', to: 'register#index', as: 'register_main'
 
   get '/parents/register', to: 'parents#new'
-  get '/parents/dashboard', to: 'parents#index'
-  get '/parents/:id/profile', to: 'parents#show', as: 'parents_profile'
+  get '/parents/:id/dashboard', to: 'parents#show'
+  get '/parents/:id/profile', to: 'parents#edit', as: 'parents_profile'
 # resources :parents, only: :show, as: 'profile'
 
   get '/teachers/register', to: 'teachers#new'
-  get '/teachers/dashboard', to: 'teachers#index'
-  get '/teachers/:id/profile', to: 'teachers#show', as: 'teachers_profile'
+  get '/teachers/:id/dashboard', to: 'teachers#show'
+  get '/teachers/:id/profile', to: 'teachers#edit', as: 'teachers_profile'
 
   # namespace :admin do
   #   get '/dashboard', to: 'admin#index'
