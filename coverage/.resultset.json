@@ -40,9 +40,15 @@
           null
         ]
       },
-      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/welcome_controller.rb": {
+      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/parents_controller.rb": {
         "lines": [
           1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
           1,
           null,
           null
@@ -51,10 +57,23 @@
       "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1635918675
+    "timestamp": 1636009098
   }
 }

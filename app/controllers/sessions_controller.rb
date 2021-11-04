@@ -2,10 +2,9 @@ class SessionsController < ApplicationController
   # skip_before_action :authenticate_user
 
   def create
-    # @user = User.find_or_create_by(email: user_params[:email], first_name: user_params[:first_name], last_name: user_params[:last_name], google_id: user_params[:google_id])
-    @user = User.find_or_create_by(email: user_params[:email])
+    @user = User.find_or_create_by(email: user_params[:email], first_name: user_params[:first_name], last_name: user_params[:last_name], google_id: user_params[:google_id])
     session[:user_id] = @user.id
-    redirect_to register_path
+    redirect_to register_main_path
   end
 
   def destroy
