@@ -1,6 +1,12 @@
-<h1>Welcome to PreKinder</h1>
+<div class="welcome-page">
+  <h1>Welcome!</h1><br>
 
-<img src="21_Pre-K-logo.PNG" class="img-thumbnail"><br><br>
+  <%= image_tag ("/assets/pre_k_logo.png"), alt: "pre-k logo" %><br><br>
+
+  <%= link_to 'New Teacher? Register your account here', teachers_register_path, { id: current_user.id } %><br>
+
+  <%= link_to 'New Parent? Register your account here', new_parent_path, {:action=>"new", :controller=>"parents", id: current_user.id} %>
 
 
-<%= link_to 'Sign in with Google', "/auth/google_oauth2"  %>
+
+</div>
