@@ -3,7 +3,9 @@ class Parent
               :last_name,
               :email,
               :address,
-              :phone_number
+              :phone_number,
+              :google_id,
+              :children
 
   def intitialize(response)
     @first_name = response[:first_name]
@@ -11,5 +13,7 @@ class Parent
     @email = response[:email]
     @address = response[:address]
     @phone_number = response[:phone_number]
+    @google_id = response[:google_id]
+    @children = response[:children]
   end
 end
