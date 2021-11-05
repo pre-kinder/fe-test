@@ -3,8 +3,12 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_or_create_by(email: user_params[:email], first_name: user_params[:first_name], last_name: user_params[:last_name], google_id: user_params[:google_id])
+    require "pry"; binding.pry
+    # @user.save  #
     session[:user_id] = @user.id
     redirect_to register_main_path
+
+    require "pry"; binding.pry
   end
 
   def destroy

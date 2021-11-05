@@ -3,6 +3,11 @@ class ParentsController < ApplicationController
   end
 
   def new
+    require "pry"; binding.pry
+  end
+
+  def create
+
   end
 
   def show
