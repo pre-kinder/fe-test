@@ -1,13 +1,15 @@
 <div class="welcome-page">
-  <h1>Welcome!</h1><br>
+  <div class="center">
+    <h1>Welcome!</h1><br>
+  </div>
 
-  <%= image_tag ("/assets/pre_k_logo.png"), alt: "pre-k logo" %><br><br>
-
+  <div class="logo">
+    <%= image_tag ("/assets/pre_k_logo.png"), alt: "pre-k logo" %><br><br>
+  </div>
   <!-- <h5>Teacher </h5> -->
-  <%= link_to 'New Teacher? Register your account here', teachers_register_path, { id: current_user.id } %><br><br>
+  <div class="center">
+    <%= link_to 'New Teacher? Register your account here', teachers_register_path, { id: current_user.id } %><br><br>
 
-  <%= link_to 'New Parent? Register your account here', new_parent_path, {:action=>"new", :controller=>"parents", id: current_user.id} %>
-
-
-
+    <%= link_to 'New Parent? Register your account here', new_parent_path, {:action=>"new", :controller=>"parents", id: current_user.id} %>
+  </div>
 </div>
