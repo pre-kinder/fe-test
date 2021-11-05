@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/spec/spec_helper.rb": {
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/spec/spec_helper.rb": {
         "lines": [
           null,
           1,
@@ -22,7 +22,7 @@
           null,
           1,
           null,
-          1,
+          0,
           null,
           null,
           1,
@@ -34,19 +34,110 @@
           null
         ]
       },
-      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/helpers/application_helper.rb": {
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/teachers_controller.rb": {
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/spec/features/register/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/spec/features/teachers/dashboard_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/spec/features/teachers/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/spec/features/welcome/index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/controllers/teachers_controller.rb": {
         "lines": [
           1,
           1,
+          0,
+          0,
+          null,
+          0,
+          null,
           null,
           null,
           1,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          null,
           null,
           null,
           1,
@@ -54,7 +145,7 @@
           null
         ]
       },
-      "/Users/kevinn/turing/mod-3/pre-kinder/front-end/app/controllers/application_controller.rb": {
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -72,8 +163,72 @@
           null,
           null
         ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/facades/forecast_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/services/weather_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/controllers/register_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/controllers/parents_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jacqwhitmer/REPOS/turing/mod3/projects/consultancy/front-end/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1636009714
+    "timestamp": 1636092369
   }
 }
