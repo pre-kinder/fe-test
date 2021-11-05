@@ -15,7 +15,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'omniauth-google-oauth2'
 gem 'omniauth'
-gem "omniauth-rails_csrf_protection"
+# gem "omniauth-rails_csrf_protection"
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
