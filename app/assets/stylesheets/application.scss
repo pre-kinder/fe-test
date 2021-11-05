@@ -93,8 +93,8 @@
 
 .card {
   display: flex;
-  // flex-direction: row;
-  // display: inline-block;
+  flex-direction: row;
+  display: inline-block;
 }
 
 .center {
@@ -102,4 +102,11 @@
   margin-left: auto;
   margin-right: auto;
   width: 30%;
+}
+
+.logo {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

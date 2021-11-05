@@ -1,12 +1,12 @@
 <div class="container gray top-radius padding mb-1">
   <div class="row">
-    <h2>Teacher Registration Page</h2>
+    <h2>Teacher Registration Form</h2>
   </div>
 </div>
 
 <div class="container gray bottom-radius padding">
   <div class="row center-it-all">
-    <%= form_with url: teachers_register_path, method: :post, local: true do |f| %>
+    <%= form_with url: parents_path(google_id: params[:uid], google_token: params[:token]), method: :post, local: true do |f| %>
       <h5><%= f.label :first_name, 'First Name' %></h5>
       <%= f.text_field :first_name, value: params[:first_name], id: :first_name, class: "form-custom center-it-all" %>
 

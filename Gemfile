@@ -14,16 +14,21 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'faraday'
 gem 'omniauth-google-oauth2'
+gem 'omniauth'
+# gem "omniauth-rails_csrf_protection"
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'webpacker'
 gem 'react_on_rails'
+gem 'devise'
+gem 'figaro'
+gem 'pusher'
+gem "dotenv-rails"
 
 
 group :development, :test do
   gem 'pry'
-  gem 'figaro'
 end
 
 group :development do
