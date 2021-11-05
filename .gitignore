@@ -28,3 +28,12 @@
 
 # Ignore application configuration
 /config/application.yml
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+/coverage
