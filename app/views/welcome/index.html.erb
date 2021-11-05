@@ -3,7 +3,8 @@
 
   <%= image_tag ("/assets/pre_k_logo.png"), alt: "pre-k logo" %><br><br>
 
-  <%= link_to 'New Teacher? Register your account here', teachers_register_path, { id: current_user.id } %><br>
+  <!-- <h5>Teacher </h5> -->
+  <%= link_to 'New Teacher? Register your account here', teachers_register_path, { id: current_user.id } %><br><br>
 
   <%= link_to 'New Parent? Register your account here', new_parent_path, {:action=>"new", :controller=>"parents", id: current_user.id} %>
 
