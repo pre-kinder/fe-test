@@ -15,7 +15,7 @@ class User < ApplicationRecord
         user = User.create(first_name: access_token[:info][:first_name],
                            last_name: access_token[:info][:last_name],
                            email: access_token[:info][:email],
-                           google_id: access_token[:info][:uid],
+                           google_id: access_token[:uid],
                            google_image_url: access_token[:info][:image],
                            password: Devise.friendly_token[0,20],
                            token: access_token[:credentials][:token]
@@ -25,27 +25,10 @@ class User < ApplicationRecord
   end
 
   def self.teacher?
-    User.role(:teacher)
+    where("role = ?", "teacher")
   end
 
-  def self.pearent?
-    User.role(:parent)
+  def self.parent?
+    where("role = ?", "parent")
   end
-
-  # def self.from_google(auth)
-  #   user = User.find_by(email: auth[:email])
-  #   if user
-  #     user.google_id = auth[:uid]
-  #     user.save
-  #   else
-  #     user = User.where(google_id: auth[:uid]).first_or_create do |user|
-  #       user.full_name = auth[:full_name]
-  #       user.email = auth[:email]
-  #       user.google_id = auth[:uid]
-  #       user.avatar_url = auth[:avatar_url]
-  #       # user.password = Devise.friendly_token[0,20]
-  #     end
-  #   end
-  #   user
-  # end
 end
