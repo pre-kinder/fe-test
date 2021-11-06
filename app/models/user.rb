@@ -15,7 +15,7 @@ class User < ApplicationRecord
         user = User.create(first_name: access_token[:info][:first_name],
                            last_name: access_token[:info][:last_name],
                            email: access_token[:info][:email],
-                           google_id: access_token[:info][:uid],
+                           google_id: access_token[:uid],
                            google_image_url: access_token[:info][:image],
                            password: Devise.friendly_token[0,20],
                            token: access_token[:credentials][:token]
@@ -25,11 +25,12 @@ class User < ApplicationRecord
   end
 
   def self.teacher?
-    User.role(:teacher)
+    where(role: :teacher)
+    require "pry"; binding.pry
   end
 
-  def self.pearent?
-    User.role(:parent)
+  def self.parent?
+    where(role: :parent)
   end
 
   # def self.from_google(auth)
