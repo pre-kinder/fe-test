@@ -19,7 +19,13 @@ Rails.application.routes.draw do
     get '/profile/edit', to: 'dashboard#edit'
   end
 
-  resources :parents
+  namespace :parents do
+    get '/dashboard', to: 'dashboard#index'
+    get '/register', to: 'registration#new'
+    post '/register', to: 'registration#create'
+    get '/profile', to: 'dashboard#show'
+    get '/profile/edit', to: 'dashboard#edit'
+  end
 
   # get '/auth/:provider/callback', to: 'sessions#create'
   # post '/', to: 'sessions#create'

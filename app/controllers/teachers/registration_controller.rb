@@ -6,23 +6,12 @@ class Teachers::RegistrationController < ApplicationController
   end
 
   def create
-  # add api service for posting user data to backend
-    if new_user.save
-      session[:user_id] = new_user.id
-      flash[:success] = 'Account has been successfully created!'
-
-      redirect_to teachers_dashboard_path
-    else
-      flash[:error] = "Account not created: #{error_message(new_user.errors)}"
-
-      redirect_to new_user_path
-    end
+     TeacherFacade.post_teacher(downcased_teacher_params)
   end
 
   private
 
   def teacher_params
-    require "pry"; binding.pry
     params.require(current_user).permit(:first_name, :last_name, :email, :phone_number, :address, :role)
   end
 

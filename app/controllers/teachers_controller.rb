@@ -7,7 +7,8 @@ class TeachersController < ApplicationController
     end
   end
 
-  def new
+  def create
+    @teacher = TeacherFacade.post_teacher(current_user.first_name, current_user.last_name, current_user.email, current_user.address, current_user.phone_number, current_user.google_image_url, current_user.google_id)
   end
 
   def show

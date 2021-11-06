@@ -4,7 +4,8 @@ class Teacher
               :email,
               :phone_number,
               :google_id,
-              :classroom_id
+              :classroom_id,
+              :google_image_url
 
   def intitialize(response)
     @first_name = response[:first_name]
@@ -13,5 +14,6 @@ class Teacher
     @phone_number = response[:phone_number]
     @google_id = response[:google_id]
     @classroom_id = response[:classroom_id]
+    @google_image_url = response[:google_image_url]
   end
 end
