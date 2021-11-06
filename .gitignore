@@ -39,4 +39,4 @@ yarn-debug.log*
 /coverage
 .env
 /config/application.yml
-coverage
+coverage/.resultset.json
