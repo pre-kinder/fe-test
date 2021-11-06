@@ -25,28 +25,10 @@ class User < ApplicationRecord
   end
 
   def self.teacher?
-    where(role: :teacher)
-    require "pry"; binding.pry
+    where("role = ?", "teacher")
   end
 
   def self.parent?
-    where(role: :parent)
+    where("role = ?", "parent")
   end
-
-  # def self.from_google(auth)
-  #   user = User.find_by(email: auth[:email])
-  #   if user
-  #     user.google_id = auth[:uid]
-  #     user.save
-  #   else
-  #     user = User.where(google_id: auth[:uid]).first_or_create do |user|
-  #       user.full_name = auth[:full_name]
-  #       user.email = auth[:email]
-  #       user.google_id = auth[:uid]
-  #       user.avatar_url = auth[:avatar_url]
-  #       # user.password = Devise.friendly_token[0,20]
-  #     end
-  #   end
-  #   user
-  # end
 end
