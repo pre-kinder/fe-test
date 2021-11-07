@@ -1,6 +1,6 @@
 <div class="welcome-page">
   <div class="center">
-    <h1>Welcome!</h1><br>
+    <h1>Welcome, <%= current_user.first_name %>!</h1><br>
   </div>
 
   <div class="logo">
@@ -8,8 +8,8 @@
   </div>
   <!-- <h5>Teacher </h5> -->
   <div class="center">
-    <%= link_to 'New Teacher? Register your account here', teachers_register_path, { id: current_user.id } %><br><br>
+    <%= link_to 'New Teacher? Register an account here', teachers_register_path, { id: current_user.id } %><br><br>
 
-    <%= link_to 'New Parent? Register your account here', new_parent_path, {:action=>"new", :controller=>"parents", id: current_user.id} %>
+    <%= link_to 'New Parent? Register an account here', new_parent_path, {:action=>"new", :controller=>"parents", id: current_user.id} %>
   </div>
 </div>
