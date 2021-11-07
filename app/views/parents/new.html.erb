@@ -1,33 +1,35 @@
 <div class="container gray top-radius padding mb-1">
   <div class="row">
-    <h2>Parent Registration Page</h2>
+    <h2>Parent Registration Form</h2>
   </div>
 </div>
 
 <div class="container gray bottom-radius padding">
   <div class="row center-it-all">
-    <%= form_with url: parents_register_path(google_id: params[:uid], google_token: params[:token]), method: :post, local: true do |f| %>
-      <h5><%= f.label :first_name, 'First Name' %></h5>
-      <%= f.text_field :first_name, value: params[:first_name], id: :first_name, class: "form-custom center-it-all" %>
+    <%= form_with url: parents_path(google_id: params[:uid], google_token: params[:token]), method: :post, local: true do |f| %>
+    <%= f.hidden_field :role, value: :parent, google_id: params[:uid], class: "form-custom center-it-all" %>
+
+      <h5><%= f.label :first_name, 'First Name:' %></h5>
+      <%= f.text_field :first_name, value: current_user.first_name, id: :first_name, class: "form-custom center-it-all" %>
 
       <br><br>
 
-      <h5><%= f.label :last_name, 'Last Name' %></h5>
-      <%= f.text_field :last_name, value: params[:last_name], id: :last_name, class: "form-custom center-it-all" %>
+      <h5><%= f.label :last_name, 'Last Name:' %></h5>
+      <%= f.text_field :last_name, value: current_user.last_name, id: :last_name, class: "form-custom center-it-all" %>
 
       <br><br>
 
-      <h5><%= f.label :email, 'Email' %></h5>
-      <%= f.text_field :email, value: params[:email], readonly: true, id: :email, class: "form-custom center-it-all" %>
+      <h5><%= f.label :email, 'Email:' %></h5>
+      <%= f.text_field :email, value: current_user.email, readonly: true, id: :email, class: "form-custom center-it-all" %>
 
       <br><br>
 
-      <h5><%= f.label :phone_number, 'Phone Number' %></h5>
+      <h5><%= f.label :phone_number, 'Phone Number:' %></h5>
       <%= f.text_field :phone_number, id: :phone_number, class: "form-custom center-it-all" %>
 
       <br><br>
 
-      <h5><%= f.label :address, 'Address' %></h5>
+      <h5><%= f.label :address, 'Address:' %></h5>
       <%= f.text_area :address, cols: 40, id: :address, class: "form-custom center-it-all" %>
 
       <br><br><br>

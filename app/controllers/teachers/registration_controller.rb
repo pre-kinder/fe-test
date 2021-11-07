@@ -10,13 +10,12 @@ class Teachers::RegistrationController < ApplicationController
     # teacher = current_user.update(downcased_teacher_params)
     if current_user.update(downcased_teacher_params)
       session[:user_id] = current_user.id
-      flash[:success] = 'Account has been successfully created!'
 
       redirect_to teachers_dashboard_path
+      flash[:success] = 'Account has been successfully created!'
     else
-      flash[:error] = "Account not created: #{error_message(current_user.errors)}"
-
       redirect_to teachers_register_path
+      flash[:error] = "Account not created: #{error_message(current_user.errors)}"
     end
   end
 

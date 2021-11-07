@@ -27,7 +27,7 @@
 /config/master.key
 
 # Ignore application configuration
-/config/application.yml
+
 
 /public/packs
 /public/packs-test
@@ -38,3 +38,6 @@ yarn-debug.log*
 
 /coverage
 .env
+
+/config/application.yml
+coverage/.resultset.json

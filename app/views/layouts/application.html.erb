@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Pre-Kinder</title>
@@ -25,25 +25,35 @@
         </form>
       </div>
       <div class="user-section">
-        <a href="<%= root_path %>"><i class="fa fa-home"></i></a>
-        <a><i class="fa fa-comment"></i></a>
-        <a href=""><i class="fa fa-plus-square"></i></a>
-        <a><i class="fa fa-compass"></i></a>
-        <a><i class="fa fa-heart"></i></a>
-        <%# <% if user_signed_in? %>
-         <a href=""><i class="fa fa-user"></i></a>
-         <!-- <a href=""><i class="fa fa-sign-out"></i></a> -->
+        <% if user_signed_in? && current_user.role == 'teacher' %>
+          <a href="<%= teachers_dashboard_path %>"><i class="fa fa-dashboard"></i></a>
+          <a><i class="fa fa-comment"></i></a>
+          <a href=""><i class="fa fa-plus-square"></i></a>
+          <a><i class="fa fa-compass"></i></a>
+          <a><i class="fa fa-heart"></i></a>
+          <a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-sign-out"></i></a>
+        <% elsif user_signed_in? && current_user.role == 'parent' %>
+          <%# <%= render new_user_registration_path %>
+          <a href="<%= parents_path %>"><i class="fa fa-dashboard"></i></a>
+          <a><i class="fa fa-comment"></i></a>
+          <a href=""><i class="fa fa-plus-square"></i></a>
+          <a><i class="fa fa-compass"></i></a>
+          <a><i class="fa fa-heart"></i></a>
+           <a href=">"<i class="fa fa-user"></i></a>
+           <a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-sign-out"></i></a>
+        <% elsif user_signed_in? && current_user.role.nil? %>
 
-         <a href=""><i class="fa fa-sign-in"></i></a>
-
+           <a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-sign-out"></i></a>
+        <% else %>
+         <a href=" <%= root_path %>"><i class="fa fa-sign-in"></i></a>
+        <% end %>
       </div>
     </div>
   </nav>
 
   <!--Main content-->
   <main class="container" style="min-height: 500px;">
-    <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
+    <%= render 'shared/flash' %><br>
     <%= yield %>
   </main><br><br><br><br><br><br>
 
@@ -66,4 +76,3 @@
   </footer>
 </body>
 </html>
-

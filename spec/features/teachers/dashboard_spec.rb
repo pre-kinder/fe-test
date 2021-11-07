@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Teacher Dashboard Page' do
   it 'displays teacher dashboard' do
-    visit teachers_dashboard_path
+    visit '/teachers/1/dashboard'
 
     expect(page).to have_content('Teacher Dashboard')
-    expect(page).to have_content('Weather Forecaset')
+    expect(page).to have_content('Weather Forecast')
     expect(page).to have_field(:q, placeholder: "enter city here")
 
     fill_in :q, with: 'Denver'
