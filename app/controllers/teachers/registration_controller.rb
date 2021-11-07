@@ -7,13 +7,13 @@ class Teachers::RegistrationController < ApplicationController
 
   def create
   # add api service for posting user data to backend
-    if new_user.save
-      session[:user_id] = new_user.id
+    if current_user.save
+      session[:user_id] = current_user.id
       flash[:success] = 'Account has been successfully created!'
 
       redirect_to teachers_dashboard_path
     else
-      flash[:error] = "Account not created: #{error_message(new_user.errors)}"
+      flash[:error] = "Account not created: #{error_message(current_user.errors)}"
 
       redirect_to new_user_path
     end
