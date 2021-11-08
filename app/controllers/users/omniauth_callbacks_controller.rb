@@ -10,10 +10,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
        flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', kind: 'Google'
        if @user.role == 'teacher'
          sign_in @user, event: :authentication
-         redirect_to teachers_dashboard_path
+         redirect_to welcome_path
        elsif @user.role == 'parent'
          sign_in @user, event: :authentication
-         redirect_to parents_path
+         redirect_to welcome_path
        else
          sign_in @user, event: :authentication
          redirect_to new_user_registration_path
