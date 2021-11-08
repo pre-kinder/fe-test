@@ -1,4 +1,6 @@
-<h2 class="center">Parent Dashboard</h2><br><br>
+<h2 class="center">Parent Dashboard</h2>
+
+<hr style="width:50% length:80%", size="10", color="green"><br>
 
 <section id="parent-forecast">
 <h4><strong>Weather Forecast</strong></h4><br>
@@ -6,14 +8,15 @@
   <%= form_with url: parents_path(current_user), method: :get, local: true do |f| %>
   <%= f.text_field :q, placeholder: "enter city here" %>
   <%= f.submit "Search" %>
-  <% end %><br>
+  <% end %><br><br>
+
 
   <% if params[:q].present? %>
+  <h5> <%= params[:q].upcase %> </h5>
     <% @forecast.each do |data| %>
-      <div class="card" style="width: 18rem;" id="daily-forecast" >
+      <div class="card" style="width: 13rem;" id="daily-forecast" >
         <img class="card-img-top" src= "<%= data.daily_icon %>" alt="weather icon">
         <div class="card-body">
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
@@ -25,8 +28,37 @@
             <li class="list-group-item">
               <b>Date:</b> <%= data.date %>
             </li>
+            <li class="list-group-item">
+              <b>Chance of Rain:</b> <%= data.daily_chance_of_rain %> %
+            </li>
+            <li class="list-group-item">
+              <b>Chance of Snow:</b> <%= data.daily_chance_of_snow %> %
+            </li>
           </ul>
      </div>
        <% end %>
  <% end %>
-</section>
+</section><br><br>
+
+<hr style="width:50% length:80%", size="10", color=black><br>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body" id="reminder">
+        <h5 class="card-title">Friendly Reminder:</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body" id="upcoming-events">
+        <h5 class="card-title">Upcoming Events:</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
