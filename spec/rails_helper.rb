@@ -1,6 +1,6 @@
 require 'simplecov'
 SimpleCov.start
-SimpleCov.add_filter ['config', 'app/channels/application_cable', 'app/jobs', 'app/mailers']
+SimpleCov.add_filter ['config', 'app/channels/application_cable', 'app/jobs', 'app/mailers', 'spec/spec_helper.rb']
 
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
@@ -36,4 +36,21 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+end
+
+OmniAuth.configure do |c|
+  c.test_mode = true
+  c.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+    :provider => "google_oauth2",
+    :uid => "123456789",
+    :info => {
+      :first_name => "Tony",
+      :last_name => "Stark",
+      :email => "tony@gmail.com"
+    },
+    :credentials => {
+      :token => "token",
+      :refresh_token => "refresh_token"
+    }
+  })
 end

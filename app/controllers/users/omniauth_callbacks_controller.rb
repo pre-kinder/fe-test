@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  # You should configure your model like this:
-  # devise :omniauthable, omniauth_providers: [:google_oauth2]
   skip_before_action :authenticate_user!
 
-  # You should also create an action method in this controller like this:
   def google_oauth2
-     # You need to implement the method below in your model (e.g. app/models/user.rb)
      @user = User.from_omniauth(request.env['omniauth.auth'])
 
      if @user.persisted?
@@ -23,7 +19,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
          redirect_to new_user_registration_path
        end
      else
-       session['devise.google_data'] = request.env['omniauth.auth']
+       session['devise.google_data'] = request.env['omniauth.auth'].except(:extra)
        redirect_to new_user_registration_url, alert: @user.errors.full_messages.join("\n")
      end
   end
@@ -47,19 +43,4 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def after_omniauth_failure_path_for(scope)
     super(scope)
   end
-
-  private
-
-  # def from_google_params
-  #   @from_google_params ||= {
-  #     google_id: auth.uid,
-  #     email: auth.info.email,
-  #     full_name: auth.info.name,
-  #     avatar_url: auth.info.image
-  #   }
-  # end
-  #
-  # def auth
-  #   @auth ||= request.env['omniauth.auth']
-  # end
 end
