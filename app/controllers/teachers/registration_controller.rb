@@ -7,7 +7,6 @@ class Teachers::RegistrationController < ApplicationController
 
   def create
   # add api service for posting user data to backend
-    # teacher = current_user.update(downcased_teacher_params)
     if current_user.update(downcased_teacher_params)
       session[:user_id] = current_user.id
 
