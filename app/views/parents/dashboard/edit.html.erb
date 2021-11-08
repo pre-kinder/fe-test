@@ -1,12 +1,12 @@
 <div class="container gray top-radius padding mb-1">
   <div class="row">
-    <h2>Teacher Profile Form</h2><br><br>
+    <h2>Parent Profile Form</h2><br><br>
   </div>
 </div>
 
 <div class="container gray bottom-radius padding">
   <div class="row center-it-all">
-      <%= form_with model: @teacher, method: :post, local: true do |f| %>
+      <%= form_with model: @parent, method: :post, local: true do |f| %>
       <%= f.hidden_field :role, value: :teacher %>
 
       <h5><%= f.label :first_name, 'First Name:' %></h5>
