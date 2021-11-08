@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     post '/register', to: 'registration#create'
     get '/profile', to: 'dashboard#show'
     get '/profile/edit', to: 'dashboard#edit'
+    get '/attendance', to: 'dashboard#attendance'
   end
 
   resources :parents do

@@ -17,6 +17,11 @@ class Teachers::DashboardController < ApplicationController
   def edit
   end
 
+  def attendance
+  end  
+
+  private
+
   def check_teacher_role?
     User.teacher?
   end
