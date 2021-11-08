@@ -9,7 +9,6 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def show
-
   end
 
   def create
@@ -19,6 +18,6 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def check_teacher_role?
-    current_user.role == 'teacher'
+    User.teacher?
   end
 end
