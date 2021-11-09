@@ -14,38 +14,33 @@
     <nav class="navbar navbar-light bg-light d-flex">
     <div class="container">
       <div class="logo">
-        <a class="navbar-brand" href="<%= root_path %>">
-          <%= fa_stacked_icon "camera inverse", base: "circle" %>
-          Pre-Kinder
+        <a class="navbar-brand" href="<%= welcome_path %>">
+          <%= image_tag '/../assets/logo.png', alt: 'logo', class: 'logo-navbar' %> Pre-Kinder
         </a>
       </div>
-      <div class="m-auto">
+      <!-- <div class="m-auto">
         <form class="form-inline search-form">
           <input class="form-control mr-sm-2" type="search" placeholder="@search" aria-label="Search">
         </form>
-      </div>
+      </div> -->
       <div class="user-section">
         <% if user_signed_in? && current_user.role == 'teacher' %>
           <a href="<%= teachers_dashboard_path %>"><i class="fa fa-dashboard"></i></a>
+          <a href="<%= teachers_attendance_path %>"><i class="fa fa-users"></i></a>
           <a><i class="fa fa-comment"></i></a>
           <a href=""><i class="fa fa-plus-square"></i></a>
-          <a><i class="fa fa-compass"></i></a>
-          <a><i class="fa fa-heart"></i></a>
-          <a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-sign-out"></i></a>
+          <a href=" <%= teachers_profile_path %> "><i class="fa fa-user"></i></a>
+          <a href="<%= destroy_user_session_path %>"><i class="fa fa-sign-out"></i></a>
         <% elsif user_signed_in? && current_user.role == 'parent' %>
-          <%# <%= render new_user_registration_path %>
-          <a href="<%= parent_path %>"><i class="fa fa-dashboard"></i></a>
+          <a href="<%= parents_path %>"><i class="fa fa-dashboard"></i></a>
+          <a href="<%= parent_children_path(current_user) %>"><i class="fa fa-child"></i></a>
           <a><i class="fa fa-comment"></i></a>
           <a href=""><i class="fa fa-plus-square"></i></a>
-          <a><i class="fa fa-compass"></i></a>
-          <a><i class="fa fa-heart"></i></a>
-           <a href=">"<i class="fa fa-user"></i></a>
-           <a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-sign-out"></i></a>
+          <a href=" <%= parent_path(current_user) %>"><i class="fa fa-user"></i></a>
+          <a href="<%= destroy_user_session_path %>"><i class="fa fa-sign-out"></i></a>
         <% elsif user_signed_in? && current_user.role.nil? %>
-
-           <a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-sign-out"></i></a>
-        <% else %>
-         <a href=" <%= root_path %>"><i class="fa fa-sign-in"></i></a>
+          <a href="<%= destroy_user_session_path %>><i class="fa fa-sign-out"></i></a>
+          <a href="<%= root_path %>"></a>
         <% end %>
       </div>
     </div>

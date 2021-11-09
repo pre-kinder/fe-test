@@ -1,28 +1,18 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-    devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
-      registrations: 'users/registrations' }
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations' }
 
-    devise_scope :user do
-      get '/users/auth/:provider/callback', to: 'users/sessions#create'
-    end
+  devise_scope :user do
+    get '/users/auth/:provider/callback', to: 'users/sessions#create'
+  end
 
-    get 'welcome', to: 'welcome#show'
+  get 'welcome', to: 'welcome#show'
 
-    namespace :teachers do
-      get '/dashboard', to: 'dashboard#index'
-      get '/register', to: 'registration#new'
-      post '/register', to: 'registration#create'
-      get '/profile', to: 'dashboard#show'
-      get '/profile/edit', to: 'dashboard#edit'
-      get '/attendance', to: 'dashboard#attendance'
-    end
-
-    resources :parents do
-      get '/children', to: 'parents#children'
-    end
-
+  resources :parents do
+    get '/children', to: 'parents#children'
+  end
 
   namespace :parents do
     get '/dashboard', to: 'dashboard#index'
@@ -30,18 +20,16 @@ Rails.application.routes.draw do
     post '/register', to: 'registration#create'
     get '/profile', to: 'dashboard#show'
     get '/profile/edit', to: 'dashboard#edit'
+    get '/attendance', to: 'dashboard#attendance'
   end
 
-  # get '/auth/:provider/callback', to: 'sessions#create'
-  # post '/', to: 'sessions#create'
-  # delete '/logout', to: 'sessions#destroy'
-  # get '/register', to: 'register#index', as: 'register_main'
-  #
-  # get '/parents/register', to: 'parents#new'
-  # get '/parents/:id/dashboard', to: 'parents#show', as: 'parents_dashboard'
-  # get '/parents/:id/profile', to: 'parents#edit', as: 'parents_profile'
+  namespace :teachers do
+    get '/dashboard', to: 'dashboard#index'
+    get '/register', to: 'registration#new'
+    post '/register', to: 'registration#create'
+    get '/profile', to: 'dashboard#show'
+    get '/profile/edit', to: 'dashboard#edit'
+    get '/attendance', to: 'dashboard#attendance'
+  end
 
-  # get '/teachers/register', to: 'teachers#new'
-  # get '/teachers/:id/dashboard', to: 'teachers#show', as: 'teachers_dashboard'
-  # get '/teachers/:id/profile', to: 'teachers#edit', as: 'teachers_profile'
 end

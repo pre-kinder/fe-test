@@ -3,5 +3,8 @@ class WelcomeController < ApplicationController
   end
 
   def edit
-  end  
+  end
+
+  def show
+  end
 end

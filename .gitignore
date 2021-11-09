@@ -36,9 +36,12 @@
 yarn-debug.log*
 .yarn-integrity
 
-/coverage
+/coverage/
 .env
+
 /config/application.yml
+coverage/.resultset.json
+coverage/index.html
 coverage
 
 # Ignore application configuration

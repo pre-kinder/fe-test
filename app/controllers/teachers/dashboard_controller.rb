@@ -9,7 +9,6 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def show
-
   end
 
   def create
@@ -19,7 +18,12 @@ class Teachers::DashboardController < ApplicationController
     @teacher = TeacherFacade.get_one_teacher(google_id)
   end
 
+  def attendance
+  end  
+
+  private
+
   def check_teacher_role?
-    current_user.role == 'teacher'
+    User.teacher?
   end
 end
