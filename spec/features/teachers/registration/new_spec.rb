@@ -46,7 +46,7 @@ RSpec.describe 'Teacher Registration Page' do
     expect(page).to have_content('Account has been successfully created!')
   end
 
-  xit 'throws an errow when missing fields' do
+  it 'throws an error when missing fields' do
     visit teachers_register_path
 
     fill_in :first_name, with: @teacher.first_name
