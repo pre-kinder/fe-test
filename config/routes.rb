@@ -10,9 +10,8 @@ Rails.application.routes.draw do
 
   get 'welcome', to: 'welcome#show'
 
-  resources :parents do
-    get '/children', to: 'parents#children'
-  end
+
+  get 'parents/:google_id/children', to: 'parents#children'
 
   namespace :parents do
     get '/dashboard', to: 'dashboard#index'

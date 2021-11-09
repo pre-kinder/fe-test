@@ -5,6 +5,7 @@ class Parents::DashboardController < ApplicationController
     else
       flash[:error] = 'Please enter a valid city'
     end
+    @parent = ParentFacade.get_one_parent(current_user.google_id)
   end
 
   def show
