@@ -17,12 +17,22 @@ class Teachers::DashboardController < ApplicationController
   def edit
   end
 
+  def update
+    ParentFacade.
+    flash[:success] = 'Your profile has been updated!'
+    redirect_to teachers_profile_edit_path
+  end
+
   def attendance
-  end  
+  end
 
   private
 
   def check_teacher_role?
     User.teacher?
   end
+
+  def teachers_params
+   params.permit(:first_name, :last_name, :email, :phone_number, :address)
+ end
 end
