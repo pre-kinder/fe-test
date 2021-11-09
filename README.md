@@ -37,7 +37,7 @@
 |--- |--- |--- |--- |
 |[<img src="https://img.shields.io/badge/Ruby-CC0000.svg?&style=flaste&logo=ruby&logoColor=white" />](https://www.ruby-lang.org/en/downloads/)|[<img src="https://img.shields.io/badge/Git-F05032.svg?&style=flaste&logo=git&logoColor=white" />](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)|[ <img src="https://img.shields.io/badge/rspec-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/rspec/rspec-rails)|[<img src="https://img.shields.io/badge/Heroku-430098.svg?&style=flaste&logo=heroku&logoColor=white" />](http://virtual-watch-party.herokuapp.com)|
 |[ <img src="https://img.shields.io/badge/Ruby%20On%20Rails-b81818.svg?&style=flat&logo=rubyonrails&logoColor=white" />](https://rubygems.org/gems/rails/versions/5.2.6)|[<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=flaste&logo=github&logoColor=white" />](https://desktop.github.com/)|[<img src="https://img.shields.io/badge/capybara-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/teamcapybara/capybara)|[<img src= "https://img.shields.io/badge/ci-circleCI-blue"/>](https://circleci.com/)|
-|[<img src="https://img.shields.io/badge/pry-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/pry/versions/0.10.3)|[< img src="https://img.shields.io/badge/b-bootstrap-yellow"/>](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[<img src="https://img.shields.io/badge/webmock-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/bblimke/webmock)
+|[<img src="https://img.shields.io/badge/pry-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/pry/versions/0.10.3)|[<img src="https://img.shields.io/badge/b-bootstrap-yellow"/>](https://rubygems.org/gems/bootstrap/versions/4.0.0)|[<img src="https://img.shields.io/badge/webmock-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://github.com/bblimke/webmock)
 |[<img src="https://img.shields.io/badge/sql-postgreSQL-green"/>](https://www.postgresql.org/)|[<img src="https://img.shields.io/badge/-HTML5-brightgreen"/>](https://developer.mozilla.org/en-US/docs/Web/HTML)|[<img src="https://img.shields.io/badge/-VCR-lightgrey"/>](https://github.com/vcr/vcr)
 |[<img src="https://img.shields.io/badge/-Postico-yellowgreen"/>](https://eggerapps.at/postico/)|[<img src="https://img.shields.io/badge/-CSS3-brightgreen"/>](https://developer.mozilla.org/en-US/docs/Web/CSS)|[<img src="https://img.shields.io/badge/launchy-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/launchy/versions/2.4.3)
 |[<img src="https://img.shields.io/badge/OmniAuth-Google%20Oauth2-brightgreen"/>](https://github.com/zquestz/omniauth-google-oauth2)|[<img src="https://img.shields.io/badge/rubocop-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />](https://rubygems.org/gems/rubocop/versions/0.39.0)|[<img src="https://img.shields.io/badge/-FactoryBot-green"/>](https://github.com/thoughtbot/factory_bot)
@@ -167,7 +167,7 @@
 
 ## Database Schema
 
-<img src="https://user-images.githubusercontent.com/78382113/140089201-1d7167e9-6324-47a9-9381-632cb909d0d3.png">
+<img src="https://user-images.githubusercontent.com/73204318/140843743-f56def06-be8f-41a2-a3ed-ce8ffae3a43c.png">
 
 ## Wireframes
 [Welcome Page](#welcome-page) | [Registration](#registration) | [New Teacher Page](#new-teacher) |
