@@ -6,7 +6,7 @@ class Child
               :parent_id,
               :attendance_status
 
-  def intitialize(response)
+  def initialize(response)
     @first_name = response[:first_name]
     @last_name = response[:last_name]
     @birthday = response[:birthday]

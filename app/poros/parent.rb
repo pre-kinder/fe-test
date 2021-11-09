@@ -7,7 +7,7 @@ class Parent
               :google_id,
               :children
 
-  def intitialize(response)
+  def initialize(response)
     @first_name = response[:first_name]
     @last_name = response[:last_name]
     @email = response[:email]
