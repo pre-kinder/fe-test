@@ -40,30 +40,32 @@
  <% end %>
 </section>
 
-<section id="what-do-i-need">
-  <h4><strong> What I Need Today</strong><h4><br>
-    <div class="card" style="width: 18rem;" id="what-i-need" >
-      <div class="card-body">
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-           <%= @forecast.jacket? %>
-        </li>
-        <li class="list-group-item">
-           <%= @forecast.sunscreen? %>
-        </li>
-        <li class="list-group-item">
-          Waterbottle
-        </li>
-        <li class="list-group-item">
-          Mask
-        </li>
-        <li class="list-group-item">
-           Nap Blanket
-        </li>
-      </ul>
- </div>
-</section><br><br>
+  <section id="what-do-i-need">
+    <h4><strong> What I Need Today</strong><h4><br>
+      <div class="card" style="width: 18rem;" id="what-i-need" >
+        <div class="card-body">
+        </div>
+        <% if params[:q].present? %>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+               <%= @forecast.jacket? %>
+            </li>
+            <li class="list-group-item">
+               <%= @forecast.sunscreen? %>
+            </li>
+            <li class="list-group-item">
+              Waterbottle
+            </li>
+            <li class="list-group-item">
+              Mask
+            </li>
+            <li class="list-group-item">
+               Nap Blanket
+            </li>
+          </ul>
+        <% end %>
+   </div>
+  </section><br><br>
 
 <hr style="width:50% length:80%", size="10", color=black><br>
 
