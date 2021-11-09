@@ -20,5 +20,6 @@ class Parents::DashboardController < ApplicationController
   end
 
   def edit
+    @parent = ParentFacade.get_one_parent(current_user.google_id)
   end
 end

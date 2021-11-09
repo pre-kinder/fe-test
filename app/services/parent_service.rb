@@ -6,7 +6,7 @@ class ParentService
   end
 
   def self.post_parent_to_api(parent_params)
-    request = Faraday.post("https://prekinder-api.herokuapps.com/api/v1/parents", headers: headers, params: JSON.generate(parent: parent_params))
+    request = Faraday.post("https://prekinder-api.herokuapp.com/api/v1/parents", headers: headers, params: JSON.generate(parent: parent_params))
   end
 
 end
