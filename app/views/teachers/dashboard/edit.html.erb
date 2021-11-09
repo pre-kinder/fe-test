@@ -1,19 +1,16 @@
-<div class="container gray top-radius padding mb-1">
-  <div class="row">
-    <h2>Teacher Profile Form</h2><br><br>
-  </div>
-</div>
-
+<h2 class="center">Teacher Profile Edit</h2><br><br>
 <div class="container gray bottom-radius padding">
   <div class="row center-it-all">
-      <%= form_with model: @teacher, method: :post, local: true do |f| %>
-      <%= f.hidden_field :role, value: :teacher %>
+    <%= form_with model: @teacher, method: :patch, local: true do |f| %>
+      <h5><%= f.label :class_room, 'Class Room:' %></h5>
+      <%= f.select :class_room, ['Butterfly Room', 'Zebra Room'], class: "form-custom center-it-all" %>
+      <br><br>
 
       <h5><%= f.label :first_name, 'First Name:' %></h5>
       <%= f.text_field :first_name, value: current_user.first_name, id: :first_name, class: "form-custom center-it-all" %>
 
       <br><br>
-
+      
       <h5><%= f.label :last_name, 'Last Name:' %></h5>
       <%= f.text_field :last_name, value: current_user.last_name, id: :last_name, class: "form-custom center-it-all" %>
 
@@ -25,12 +22,12 @@
       <br><br>
 
       <h5><%= f.label :phone_number, 'Phone Number:' %></h5>
-      <%= f.text_field :phone_number, value: @teacher.phone_number, id: :phone_number, class: "form-custom center-it-all" %>
+      <%= f.text_field :phone_number, value: current_user.phone_number, id: :phone_number, class: "form-custom center-it-all" %>
 
       <br><br>
 
       <h5><%= f.label :address, 'Address:' %></h5>
-      <%= f.text_area :address, cols: 40, value: @teacher.address, id: :address, class: "form-custom center-it-all" %>
+      <%= f.text_area :address, cols: 40, value: current_user.address, id: :address, class: "form-custom center-it-all" %>
 
       <br><br><br>
 
