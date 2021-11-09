@@ -6,10 +6,9 @@ class Teachers::RegistrationController < ApplicationController
   end
 
   def create
-  # add api service for posting user data to backend
     if current_user.update(downcased_teacher_params)
       session[:user_id] = current_user.id
-
+      TeacherFacade.post_teacher(downcased_teacher_params)
       redirect_to teachers_dashboard_path
       flash[:success] = 'Account has been successfully created!'
     else

@@ -15,6 +15,7 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def edit
+    @teacher = TeacherFacade.get_one_teacher(google_id)
   end
 
   def update

@@ -10,13 +10,13 @@
       <%= f.text_field :first_name, value: current_user.first_name, id: :first_name, class: "form-custom center-it-all" %>
 
       <br><br>
-
-      <h5><%= f.label :last_name, 'Last Name::' %></h5>
+      
+      <h5><%= f.label :last_name, 'Last Name:' %></h5>
       <%= f.text_field :last_name, value: current_user.last_name, id: :last_name, class: "form-custom center-it-all" %>
 
       <br><br>
 
-      <h5><%= f.label :email, 'Email' %></h5>
+      <h5><%= f.label :email, 'Email:' %></h5>
       <%= f.text_field :email, value: current_user.email, readonly: true, id: :email, class: "form-custom center-it-all" %>
 
       <br><br>
@@ -29,9 +29,9 @@
       <h5><%= f.label :address, 'Address:' %></h5>
       <%= f.text_area :address, cols: 40, value: current_user.address, id: :address, class: "form-custom center-it-all" %>
 
-      <br><br>
+      <br><br><br>
 
-      <%= f.submit 'Edit Profile', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
+      <%= f.submit 'Update Profile', class: "btn btn-sm btn-white button-bg btn-outline-dark" %>
     <% end %>
   </div>
 </div>

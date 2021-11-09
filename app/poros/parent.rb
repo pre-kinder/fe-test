@@ -5,7 +5,7 @@ class Parent
               :address,
               :phone_number,
               :google_id,
-              :children
+              :google_image_url
 
   def initialize(response)
     @first_name = response[:first_name]
@@ -14,6 +14,6 @@ class Parent
     @address = response[:address]
     @phone_number = response[:phone_number]
     @google_id = response[:google_id]
-    @children = response[:children]
+    @google_image_url = response[:google_image_url]
   end
 end

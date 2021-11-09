@@ -17,5 +17,7 @@ class TeacherFacade
 
   end
 
-  
+  def self.post_teacher(teacher_params)
+    TeacherService.post_teacher_to_api(teacher_params)
+  end
 end

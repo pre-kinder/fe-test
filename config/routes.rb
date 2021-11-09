@@ -10,6 +10,13 @@ Rails.application.routes.draw do
 
   get 'welcome', to: 'welcome#show'
 
+
+  get '/parents/:id/children', to: 'parents#children', as: 'parent_children'
+  get '/parents/edit', to: 'parents#edit'
+  get '/parents/new', to: 'parents#new'
+  get '/parents', to: 'parents#index'
+  get '/parents/:id', to: 'parents#show'
+
   namespace :teachers do
     get '/dashboard', to: 'dashboard#index'
     get '/register', to: 'registration#new'
@@ -21,7 +28,4 @@ Rails.application.routes.draw do
     get '/attendance', to: 'dashboard#attendance'
   end
 
-  resources :parents do
-    get '/children', to: 'parents#children'
-  end
 end

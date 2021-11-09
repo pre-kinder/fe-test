@@ -18,4 +18,29 @@ class ForecastInfo
     @daily_chance_of_rain = data[:daily_chance_of_rain]
     @daily_chance_of_snow = data[:daily_chance_of_snow]
   end
+
+  def jacket?
+    if @avg_temp < 45
+      "Coat"
+    elsif @avg_temp < 60
+      "Jacket"
+    elsif @avg_temp < 70
+      "Long Sleeves"
+    elsif @avg_temp < 100
+      "Short Sleeves"
+    else
+      "Tank Top"
+    end
+  end
+
+  def sunscreen?
+    if @avg_temp > 65 && @description.includes("sunny")
+      "Sunscreen"
+    elsif @daily_chance_of_rain > 50
+      "Umbrella"
+    elsif @daily_chance_of_snow > 50
+      "Boots"
+    end
+  end
+
 end
