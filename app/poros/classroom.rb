@@ -5,10 +5,10 @@ class Classroom
               :teachers,
               :events
 
-  def intitialize(response)
+  def initialize(response)
     @name = response[:name]
     @children = response[:children]
     @teachers = response[:teachers]
     @events = response[:events]
-  end 
+  end
 end
