@@ -1,6 +1,5 @@
 class Classroom
   attr_reader :name,
-            #not sure how rails handles the plurarlity here, but if we can serialize to children, that would be ideal
               :children,
               :teachers,
               :events

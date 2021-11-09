@@ -8,20 +8,14 @@ class ParentsController < ApplicationController
   end
 
   def new
-  end
-
-  def create
-  # add api service for posting user data to backend
-    # teacher = current_user.update(downcased_teacher_params)
     if current_user.update(downcased_parent_params)
       session[:user_id] = current_user.id
-      flash[:success] = 'Account has been successfully created!'
-
+      ParentFacade.post_parent(downcased_parent_params)
       redirect_to parents_path
+      flash[:success] = 'Account has been successfully created!'
     else
+      redirect_to "/parents/new"
       flash[:error] = "Account not created: #{error_message(current_user.errors)}"
-
-      redirect_to new_user_path
     end
   end
 
@@ -29,11 +23,11 @@ class ParentsController < ApplicationController
   end
 
   def edit
+    @parent = ParentFacade.get_one_parent(current_user.google_id)
   end
 
   def children
-    # parent = User.find(params[current_user.google_id])
-    # @children = parent.children
+    #@children = ParentFacade.get_all_children(current_user.google_id)
   end
 
   private

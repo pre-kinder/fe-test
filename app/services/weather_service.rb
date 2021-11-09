@@ -1,6 +1,6 @@
 class WeatherService
   def request_api(city)
-    response = Faraday.get("http://localhost:5000/api/v1/forecast?q=#{city}")
+    response = Faraday.get("https://prekinder-api.herokuapp.com/api/v1/forecast?q=#{city}")
 
     parse_json(response)
   end
