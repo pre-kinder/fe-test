@@ -15,10 +15,10 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def edit
-    #@teacher = TeacherFacade.get_one_teacher(google_id)
   end
 
   def update
+    TeacherFacade.update_teacher_profile(json_body)
     flash[:success] = 'Your profile has been updated!'
     redirect_to teachers_profile_edit_path
   end
@@ -32,6 +32,19 @@ class Teachers::DashboardController < ApplicationController
   end
 
   private
+
+  def json_body
+    body = {
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      phone_number: params[:phone_number],
+      address: params[:address],
+      role: params[:role],
+      google_id: current_user.google_id,
+      google_image_url: current_user.google_image_url
+    }
+  end
 
   def check_teacher_role?
     User.teacher?

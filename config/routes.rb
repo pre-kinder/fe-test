@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/parents/children', to: 'parents#children', as: 'parent_children'
   get '/parents/edit', to: 'parents#edit'
+  patch '/parents/edit', to: 'parents#update'
   get '/parents/new', to: 'parents#new'
   post '/parents/new', to: 'parents#create'
   get '/parents', to: 'parents#index'
