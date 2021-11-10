@@ -27,6 +27,11 @@ class Teachers::DashboardController < ApplicationController
   def attendance
   end
 
+  def classroom
+    # @children = ChildrenFacade.classroom_children(current_user.google_id)
+    # @events = EventFacade.classroom_events(current_user.google_id)
+  end
+
   private
 
   def check_teacher_role?
@@ -34,6 +39,6 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def teachers_params
-   params.permit(:first_name, :last_name, :email, :phone_number, :address)
+   params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id)
  end
 end

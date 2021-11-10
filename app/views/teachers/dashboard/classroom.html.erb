@@ -1,0 +1,28 @@
+<h2 class="center">Classroom Editor</h2>
+
+<hr style="width:50% length:80%", size="10", color=black><br>
+
+<section id="add-child">
+<h4><strong>Add Child to Classroom</strong></h4><br>
+
+  <%= form_with url: "/teachers/children", method: :post, local: true do |f| %>
+  <%= f.text_field :first_name, placeholder: "First Name" %>
+  <%= f.text_field :last_name, placeholder: "Last Name" %>
+  <%= f.text_field :birthday, placeholder: "Birthday" %>
+  <%= f.submit "Add Child" %>
+  <% end %><br><br>
+</section>
+
+<hr style="width:50% length:80%", size="10", color=black><br>
+
+<section id="add-event">
+<h4><strong>Add Event to Classroom</strong></h4><br>
+
+  <%= form_with url: "/teachers/events", method: :post, local: true do |f| %>
+  <%= f.text_field :title, placeholder: "Title" %>
+  <%= f.text_field :date, placeholder: "Date" %>
+  <%= f.text_field :time, placeholder: "Time" %>
+  <%= f.text_field :description, placeholder: "Description" %>
+  <%= f.submit "Create Event" %>
+  <% end %><br><br>
+</section>

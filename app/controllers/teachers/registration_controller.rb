@@ -1,5 +1,6 @@
 class Teachers::RegistrationController < ApplicationController
   def new
+    @classrooms = ClassroomFacade.get_all_classrooms
   end
 
   def edit
