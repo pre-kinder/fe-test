@@ -1,7 +1,15 @@
-class EventService
-  def self.request_api(google_id)
-    response = Faraday.get("http://localhost:5000/api/v1/events?#{google_id}")
+class EventService < BackEndService
+  def self.get_one_event(classroom_id)
+    response = conn.get("/api/v1/event?#{classroom_id}")
 
-    JSON.parse(response.body, symbolize_names: true)
+    parse_json(response)
+  end
+
+  def self.create_event(event_params)
+    conn.post(
+      '/api/v1/events',
+      event_params.to_json,
+      'Content-Type' => 'application/json'
+    )
   end
 end

@@ -15,12 +15,11 @@ RSpec.describe TeacherService do
            }).
          to_return(status: 200, body: json_response, headers: {})
 
-
     request = TeacherService.get_one_teacher(mock_google_id)
 
     expect(request).to be_a(Hash)
     expect(request[:data]).to have_key(:id)
-    expect(request[:data][:id]).to be_an(String)
+    expect(request[:data][:id]).to be_a(String)
 
     expect(request[:data][:attributes]).to have_key(:first_name)
     expect(request[:data][:attributes][:first_name]).to be_a(String)
