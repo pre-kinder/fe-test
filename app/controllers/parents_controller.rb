@@ -8,6 +8,9 @@ class ParentsController < ApplicationController
   end
 
   def new
+  end
+
+  def create
     if current_user.update(downcased_parent_params)
       session[:user_id] = current_user.id
       ParentFacade.post_parent(downcased_parent_params)
@@ -20,10 +23,11 @@ class ParentsController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
-    @parent = ParentFacade.get_one_parent(current_user.google_id)
+    #@parent = ParentFacade.get_one_parent(current_user.google_id)
   end
 
   def children
@@ -33,7 +37,7 @@ class ParentsController < ApplicationController
   private
 
   def parent_params
-    params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id, :google_image_url)
+    params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id, :google_image_url, :role)
   end
 
   def downcased_parent_params

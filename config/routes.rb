@@ -11,9 +11,10 @@ Rails.application.routes.draw do
   get 'welcome', to: 'welcome#show'
 
 
-  get '/parents/:id/children', to: 'parents#children', as: 'parent_children'
+  get '/parents/children', to: 'parents#children', as: 'parent_children'
   get '/parents/edit', to: 'parents#edit'
   get '/parents/new', to: 'parents#new'
+  post '/parents/new', to: 'parents#create'
   get '/parents', to: 'parents#index'
   get '/parents/:id', to: 'parents#show'
 
