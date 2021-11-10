@@ -1,8 +1,9 @@
 class ClassroomFacade
-  def self.get_one_class(name)
-    service = ClassroomService.new
-    classroom_data = service.request_api(name)
+  def self.get_all_classrooms
+    classroom_data = ClassroomService.get_all_classrooms
 
-    Classroom.new(classroom_data[:data][:attributes])
+    classroom_data.map do |data|
+      Classroom.new(data[:data][:attributes])
+    end 
   end
 end

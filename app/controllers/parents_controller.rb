@@ -33,7 +33,7 @@ class ParentsController < ApplicationController
   private
 
   def parent_params
-    params.permit(:first_name, :last_name, :email, :phone_number, :address, :role)
+    params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id, :google_image_url)
   end
 
   def downcased_parent_params
