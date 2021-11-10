@@ -6,7 +6,7 @@ class TeacherFacade
     Teacher.new(teacher_data[:data][:attributes])
   end
 
-  def self.get_teacher_profile(google_id))
+  def self.get_teacher_profile(google_id)
     service = TeacherService.new
     teacher_data = service.get_teacher_profile(google_id)
 
