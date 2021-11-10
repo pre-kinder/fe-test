@@ -1,7 +1,7 @@
-class HolidayService
+class HolidayService < BackEndService
   def self.request_api(timeframe)  #?
-    response = Faraday.get("http://localhost:5000/api/v1/holidays")
+    response = conn.get("/api/v1/holidays")
 
-    JSON.parse(response.body, symbolize_names: true)
+    parse_json(response)
   end
 end

@@ -1,7 +1,7 @@
-class ClassroomService
-  def self.request_api(name)
-    response = Faraday.get("http://localhost:5000/api/v1/classroom?name=#{name}")
+class ClassroomService < BackEndService
+  def self.get_one_classroom(classroom_id)
+    response = conn.get("/api/v1/classrooms/#{classroom_id}")
 
-    JSON.parse(response.body, symbolize_names: true)
+    parse_json(response)
   end
 end

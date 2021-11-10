@@ -12,4 +12,10 @@ class EventService < BackEndService
       'Content-Type' => 'application/json'
     )
   end
+
+  def self.get_classroom_events(classroom_id)
+    response = conn.get("/api/v1/classrooms/#{classroom_id}/events")
+
+    parse_json(response)
+  end
 end
