@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     # get '/profile', to: 'dashboard#show'
     get '/profile/edit', to: 'dashboard#edit'
     patch '/profile/edit', to: 'dashboard#update'
-
+    get '/classroom', to: 'dashboard#classroom'
     get '/attendance', to: 'dashboard#attendance'
   end
 
