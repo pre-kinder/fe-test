@@ -8,7 +8,7 @@ class Teachers::RegistrationController < ApplicationController
   def create
     if current_user.update(downcased_teacher_params)
       session[:user_id] = current_user.id
-      TeacherFacade.post_teacher(downcased_teacher_params)
+      TeacherFacade.create_teacher(downcased_teacher_params)
       redirect_to teachers_dashboard_path
       flash[:success] = 'Account has been successfully created!'
     else
@@ -20,7 +20,7 @@ class Teachers::RegistrationController < ApplicationController
   private
 
   def teacher_params
-    params.permit(:first_name, :last_name, :email, :phone_number, :address, :role)
+    params.permit(:first_name, :last_name, :email, :phone_number, :address, :role, :google_id)
   end
 
   def downcased_teacher_params

@@ -11,15 +11,11 @@ class Teachers::DashboardController < ApplicationController
   def show
   end
 
-  def create
-  end
-
   def edit
-    @teacher = TeacherFacade.get_one_teacher(google_id)
   end
 
   def update
-    ParentFacade.
+    TeacherFacade.update_teacher_profile(params, google_id)
     flash[:success] = 'Your profile has been updated!'
     redirect_to teachers_profile_edit_path
   end
