@@ -1,0 +1,56 @@
+<h2 class="center">Parent Dashboard</h2><br><br>
+
+<section id="parent-forecast">
+<h4><strong>Weather Forecast</strong></h4><br>
+
+  <%= form_with url: parents_path(current_user), method: :get, local: true do |f| %>
+  <%= f.text_field :q, placeholder: "enter city here" %>
+  <%= f.submit "Search" %>
+  <% end %><br>
+
+  <% if params[:q].present? %>
+    <% @forecast.each do |data| %>
+      <div class="card" style="width: 18rem;" id="daily-forecast" >
+        <img class="card-img-top" src= "<%= data.daily_icon %>" alt="weather icon">
+        <div class="card-body">
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <b>Daily Average Temp:</b> <%= data.avg_temp %> F
+            </li>
+            <li class="list-group-item">
+              <b>Description:</b> <%= data.description %>
+            </li>
+            <li class="list-group-item">
+              <b>Date:</b> <%= data.date %>
+            </li>
+          </ul>
+     </div>
+       <% end %>
+ <% end %>
+</section>
+
+<section id="what-do-i-need">
+  <h4><strong> What I Need Today</strong><h4><br>
+    <div class="card" style="width: 18rem;" id="what-i-need" >
+      <div class="card-body">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+           <%= @forecast.jacket? %>
+        </li>
+        <li class="list-group-item">
+           <%= @forecast.sunscreen? %>
+        </li>
+        <li class="list-group-item">
+          Waterbottle
+        </li>
+        <li class="list-group-item">
+          Mask
+        </li>
+        <li class="list-group-item">
+           Nap Blanket
+        </li>
+      </ul>
+ </div>

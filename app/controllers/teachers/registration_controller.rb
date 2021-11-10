@@ -1,5 +1,6 @@
 class Teachers::RegistrationController < ApplicationController
   def new
+    #@classrooms = ClassroomFacade.get_all_classrooms
   end
 
   def edit
@@ -20,7 +21,7 @@ class Teachers::RegistrationController < ApplicationController
   private
 
   def teacher_params
-    params.permit(:first_name, :last_name, :email, :phone_number, :address, :role, :google_id)
+    params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id, :google_image_url, :role)
   end
 
   def downcased_teacher_params

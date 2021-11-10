@@ -7,7 +7,7 @@
 <div class="container gray bottom-radius padding">
   <div class="row center-it-all">
     <%= form_with model: @parent, method: :post, local: true do |f| %>
-    <%= f.hidden_field :role, value: :parent %>
+    <%= f.hidden_field :role, value: "parent" %>
 
       <h5><%= f.label :first_name, 'First Name:' %></h5>
       <%= f.text_field :first_name, value: current_user.first_name, id: :first_name, class: "form-custom center-it-all" %>
