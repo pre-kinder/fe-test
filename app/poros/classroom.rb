@@ -3,7 +3,7 @@ class Classroom
               :id
 
   def initialize(response)
-    @name = response[:name]
-    @id = response[:id]
+     @name = response[:attributes][:name]
+     @id = response[:id]
   end
 end
