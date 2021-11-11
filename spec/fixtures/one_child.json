@@ -3,12 +3,11 @@
     "id": "1",
     "type": "child",
     "attributes": {
-      "first_name": "",
-      "last_name": "",
-      "birthday": "",
-      "attendance_status": "",
-      "parent_id": "",
-      "classroom_id": "",
+      "first_name": "Billy",
+      "last_name": "Billison",
+      "birthday": "06-06-2015",
+      "parent_id": "abcdefghijkl123456789",
+      "classroom_id": "1",
     }
   }
 }

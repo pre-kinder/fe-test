@@ -7,8 +7,7 @@ RSpec.describe Child do
       "last_name": "Smith",
       "birthday": 2016-06-22,
       "classroom_id": 2,
-      "parent_id": 3,
-      "attendance_status": "Present"
+      "parent_id": 3
     }
     @child = Child.new(kid_attr)
 
@@ -18,6 +17,5 @@ RSpec.describe Child do
     expect(@child.birthday).to eq(2016-06-22)
     expect(@child.classroom_id).to eq(2)
     expect(@child.parent_id).to eq(3)
-    expect(@child.attendance_status).to eq("Present")
   end
 end

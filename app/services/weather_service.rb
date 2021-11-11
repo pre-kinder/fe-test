@@ -1,5 +1,5 @@
 class WeatherService < BackEndService
-  def request_api(city)
+  def self.request_api(city)
     response = conn.get("/api/v1/forecast?q=#{city}")
 
     parse_json(response)

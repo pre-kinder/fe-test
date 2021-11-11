@@ -1,12 +1,13 @@
 class ParentService < BackEndService
-  def self.request_api(email)
+
+  def self.get_one_parent(email)
     response = conn.get("/api/v1/parent?#{email}")
 
     parse_json(response)
   end
 
-  def self.post_parent_to_api(parent_params)
-    request = conn.post("/api/v1/parents", parent_params)
+  def self.create_parent(parent_params)
+    conn.post("/api/v1/parents", parent_params)
   end
 
   def self.update_parent_profile(parent_params, parent_id)
