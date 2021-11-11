@@ -48,10 +48,10 @@
         <% if params[:q].present? %>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-               <%= @forecast.jacket? %>
+               <%= @forecast.first.jacket? %>
             </li>
             <li class="list-group-item">
-               <%= @forecast.sunscreen? %>
+               <%= @forecast.first.sunscreen? %>
             </li>
             <li class="list-group-item">
               Waterbottle

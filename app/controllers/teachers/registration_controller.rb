@@ -29,7 +29,8 @@ class Teachers::RegistrationController < ApplicationController
       address: params[:address],
       role: params[:role],
       google_id: current_user.google_id,
-      google_image_url: current_user.google_image_url
+      google_image_url: current_user.google_image_url,
+      classroom_id: params[:class_room]
     }
   end
 

@@ -1,6 +1,6 @@
 class WeatherService < BackEndService
-  def request_api(city)
-    response = conn.get("/api/v1/forecast?q=#{city}")
+  def self.request_api(city)
+    response = Faraday.get("https://prekinder-api.herokuapp.com/api/v1/forecast?q=#{city}")
 
     parse_json(response)
   end
