@@ -1,36 +1,36 @@
 require 'rails_helper'
 
 RSpec.describe ParentService do
-  xit 'returns one parent', :vcr do
-    parent_id = 1
+  it 'returns one parent', :vcr do
+    email = "lucy@gmail.com"
 
     request = ParentService.get_one_parent(email)
 
     expect(request).to be_a(Hash)
-    expect(request[:data]).to be_a(Hash)
-    expect(request[:data]).to have_key(:id)
-    expect(request[:data][:id]).to be_a(String)
+    expect(request[:data]).to be_a(Array)
+    expect(request[:data][0]).to have_key(:id)
+    expect(request[:data][0][:id]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:first_name)
-    expect(request[:data][:attributes][:first_name]).to be_a(String)
+    expect(request[:data][0][:attributes]).to have_key(:first_name)
+    expect(request[:data][0][:attributes][:first_name]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:last_name)
-    expect(request[:data][:attributes][:last_name]).to be_a(String)
+    expect(request[:data][0][:attributes]).to have_key(:last_name)
+    expect(request[:data][0][:attributes][:last_name]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:email)
-    expect(request[:data][:attributes][:email]).to be_a(String)
+    expect(request[:data][0][:attributes]).to have_key(:email)
+    expect(request[:data][0][:attributes][:email]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:address)
-    expect(request[:data][:attributes][:address]).to be_a(String)
+    expect(request[:data][0][:attributes]).to have_key(:address)
+    expect(request[:data][0][:attributes][:address]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:phone_number)
-    expect(request[:data][:attributes][:phone_number]).to be_a(String)
+    expect(request[:data][0][:attributes]).to have_key(:phone_number)
+    expect(request[:data][0][:attributes][:phone_number]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:google_id)
-    expect(request[:data][:attributes][:google_id]).to be_a(String)
+    expect(request[:data][0][:attributes]).to have_key(:google_id)
+    expect(request[:data][0][:attributes][:google_id]).to be_a(String)
 
-    expect(request[:data][:attributes]).to have_key(:google_image_url)
-    expect(request[:data][:attributes][:google_image_url]).to be_an(String)
+    expect(request[:data][0][:attributes]).to have_key(:google_image_url)
+    expect(request[:data][0][:attributes][:google_image_url]).to be_an(String)
   end
 
   xit 'creates a parent', :vcr do

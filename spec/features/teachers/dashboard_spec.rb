@@ -16,9 +16,9 @@ RSpec.describe 'Teacher Dashboard Page' do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@teacher)
   end
 
-  it 'displays teacher dashboard' do
+  it 'displays teacher dashboard', :vcr do
     visit teachers_dashboard_path
-    
+
     expect(page).to have_content('Teacher Dashboard')
     expect(page).to have_content('Weather Forecast')
     expect(page).to have_field(:q, placeholder: "enter city here")

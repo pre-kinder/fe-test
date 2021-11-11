@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/teachers/find?email=amada@gmail.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d1102ee3f06206781da39f004658138d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a9fe91ee-d01f-44f5-b380-4ce8a4900e35
+      X-Runtime:
+      - '0.002707'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"4","type":"teacher","attributes":{"classroom_id":4,"first_name":"Amada","last_name":"Aooooyooo","email":"amada@gmail.com","address":"123
+        Main St Denver, CO 37278","phone_number":"327-433-4343","google_image_url":"2368ihefndskzsaudfd89djfasf","google_id":"372349473"}}]}'
+  recorded_at: Thu, 11 Nov 2021 23:26:05 GMT
+recorded_with: VCR 6.0.0
