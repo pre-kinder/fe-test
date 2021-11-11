@@ -40,6 +40,8 @@
  <% end %>
 </section>
 
+<hr style="width:50% length:80%", size="10", color="green"><br>
+
   <section id="what-do-i-need">
     <h4><strong> What I Need Today</strong><h4><br>
       <div class="card" style="width: 18rem;" id="what-i-need" >
@@ -48,10 +50,10 @@
         <% if params[:q].present? %>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-               <%= @forecast.jacket? %>
+               <%= @forecast.first.jacket? %>
             </li>
             <li class="list-group-item">
-               <%= @forecast.sunscreen? %>
+               <%= @forecast.first.sunscreen? %>
             </li>
             <li class="list-group-item">
               Waterbottle
@@ -69,23 +71,22 @@
 
 <hr style="width:50% length:80%", size="10", color=black><br>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body" id="reminder">
-        <h5 class="card-title">My Children:</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<section id="holidays">
+  <h4><strong> Upcoming Holidays</strong><h4><br>
+    <div class="card" style="width: 18rem;" id="upcoming-holidays" >
+      <div class="card-body">
       </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body" id="upcoming-events">
-        <h5 class="card-title">Upcoming Events:</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
+      <% if !@holidays.nil? %>
+        <% @holidays.each do |holiday| %>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+               <%= holiday.name %>
+               <%= holiday.date %>
+            </li>
+          </ul>
+        <% end %>
+      <% else %>
+        <h5>No Holidays Upcoming</h5>
+      <% end %>
+ </div>
+</section><br><br>
