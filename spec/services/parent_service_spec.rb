@@ -1,23 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe ParentService do
-  it 'returns one parent' do
-    parent_id = "1"
-    json_response = File.read('spec/fixtures/one_parent.json')
+  it 'returns one parent', :vcr do
+    parent_id = 1
 
-    stub_request(:get, "https://prekinder-api.herokuapp.com/api/v1/parents/#{parent_id}").
-         with(
-           headers: {
-          'Accept'=>'*/*',
-          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-          'User-Agent'=>'Faraday v1.8.0'
-           }).
-         to_return(status: 200, body: json_response, headers: {})
-
-    request = ParentService.get_one_parent(google_id)
+    request = ParentService.get_one_parent(email)
 
     expect(request).to be_a(Hash)
-    expect(request[:data]).to be_an(Array)
+    expect(request[:data]).to be_a(Hash)
     expect(request[:data]).to have_key(:id)
     expect(request[:data][:id]).to be_a(String)
 
@@ -43,56 +33,37 @@ RSpec.describe ParentService do
     expect(request[:data][:attributes][:google_image_url]).to be_an(String)
   end
 
-  it 'creates a parent' do
+  xit 'creates a parent', :vcr do
     parent_params = { first_name: "Meg",
                       last_name: "Pintozzi",
                       email: "meg@gmail.com",
                       address: "123 Main St, Denver, CO, 80001",
                       phone_number: "1234567890",
                       google_id: "abcdefghijkl123456789",
-                      classroom_id: "1",
-
+                      google_image_url: "image_url",
+                      classroom_id: 1,
+                      role: "parent"
     }
-    stub_request(:post, "https://prekinder-api.herokuapp.com/api/v1/parents").
-         with(
-           headers: {
-       	  'Accept'=>'*/*',
-       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-       	  'User-Agent'=>'Faraday v1.8.0'
-           }).
-         to_return(status: 200, headers: {})
 
     request = ParentService.create_parent(parent_params)
 
-    expect(request).to have_status(200)
+    expect(request.status).to eq(201)
   end
 
-  it 'can update a parent profile' do
+  xit 'can update a parent profile', :vcr do
     parent_params = { first_name: "Erin",
                       last_name: "Stang",
                       email: "Erin@gmail.com",
                       address: "321 Main St, Denver, CO, 80001",
                       phone_number: "9876543210",
                       google_id: "abcdefghijkl123456789",
-                      classroom_id: "1",
+                      classroom_id: 1,
+                      role: "parent"
 
     }
-    mock_google_id = "abcdefghijkl123456789"
-    json_response = File.read('spec/fixtures/one_parent.json')
 
-    stub_request(:patch, "https://prekinder-api.herokuapp.com/api/v1/parents/abcdefghijkl123456789").
-         with(
-           body: "{\"first_name\":\"Erin\",\"last_name\":\"Stang\",\"email\":\"Erin@gmail.com\",\"address\":\"321 Main St, Denver, CO, 80001\",\"phone_number\":\"9876543210\",\"google_id\":\"abcdefghijkl123456789\",\"classroom_id\":\"1\"}",
-           headers: {
-       	  'Accept'=>'*/*',
-       	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-       	  'Content-Type'=>'application/json',
-       	  'User-Agent'=>'Faraday v1.8.0'
-           }).
-         to_return(status: 200, body: json_response, headers: {})
+    request = ParentService.update_parent_profile(parent_params, parent_id)
 
-    request = ParentService.update_parent_profile(parent_params, mock_google_id)
-
-    expect(request).to have_status(200)
+    expect(request.status).to eq(201)
   end
 end
