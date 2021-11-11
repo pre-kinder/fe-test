@@ -29,20 +29,20 @@ class Teachers::DashboardController < ApplicationController
   def classroom
     @teacher = TeacherFacade.get_one_teacher(current_user.email)
     @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
-    @children = ChildrenFacade.classroom_children(@classroom.id)
-    @events = EventFacade.classroom_events(@classroom.id)
+    @children = ChildFacade.get_classroom_children(@classroom.id)
+    @events = EventFacade.get_classroom_events(@classroom.id)
   end
 
   def event_post
     @teacher = TeacherFacade.get_one_teacher(current_user.email)
     @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
-    EventFacade.post_event(event_json_body)
+    EventFacade.create_event(event_json_body)
   end
 
   def child_post
     @teacher = TeacherFacade.get_one_teacher(current_user.email)
     @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
-    ChildrenFacade.post_child(child_json_body)
+    ChildFacade.create_child(child_json_body)
   end
 
   private
