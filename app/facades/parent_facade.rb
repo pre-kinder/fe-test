@@ -4,6 +4,7 @@ class ParentFacade
 
     Parent.new(parent_data[:data][:attributes])
   end
+  
   def self.post_parent(parent_params)
     ParentService.post_parent_to_api(parent_params)
   end

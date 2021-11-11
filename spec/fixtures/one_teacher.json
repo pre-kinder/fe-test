@@ -1,0 +1,15 @@
+{
+  "data": {
+    "id": "1",
+    "type": "teacher",
+    "attributes": {
+      "first_name": "Meg",
+      "last_name": "Pintozzi",
+      "email": "meg@gmail.com",
+      "address": "123 Main St, Denver, CO, 80001",
+      "phone_number": "1234567890",
+      "google_id": "abcdefghijkl123456789",
+      "classroom_id": "1"
+    }
+  }
+}

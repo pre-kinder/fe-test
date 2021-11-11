@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "1",
+        "type": "child",
+        "attributes": {
+          "first_name": "Billy",
+          "last_name": "Billison",
+          "birthday": "06-06-2015",
+          "attendance_status": "Present",
+          "parent_id": "1",
+          "classroom_id": "1",
+        }
+    },
+    {
+      "id": "2",
+      "type": "child",
+      "attributes": {
+        "first_name": "Timmy",
+        "last_name": "Timmison",
+        "birthday": "06-06-2015",
+        "attendance_status": "Present",
+        "parent_id": "1",
+        "classroom_id": "1",
+      }
+    },
+    {
+      "id": "3",
+      "type": "child",
+      "attributes": {
+        "first_name": "Jimmy",
+        "last_name": "Jimmison",
+        "birthday": "06-06-2015",
+        "attendance_status": "Present",
+        "parent_id": "1",
+        "classroom_id": "1",
+      }
+    }
+  ]
+}
