@@ -27,7 +27,9 @@ Rails.application.routes.draw do
     get '/profile/edit', to: 'dashboard#edit'
     patch '/profile/edit', to: 'dashboard#update'
     get '/classroom', to: 'dashboard#classroom'
-    get '/attendance', to: 'dashboard#attendance'
+    #get '/attendance', to: 'dashboard#attendance'
+    post '/classroom/events', to: 'dashboard#event_post'
+    post '/classroom/children', to: 'dashboard#children_post'
   end
 
 end

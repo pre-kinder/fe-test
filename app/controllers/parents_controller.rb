@@ -37,7 +37,8 @@ class ParentsController < ApplicationController
   end
 
   def children
-    #@children = ParentFacade.get_all_children(current_user.google_id)
+    @parent = ParentFacade.get_one_parent(current_user.email)
+    @children = ChildrenFacade.get_parent_children(@parent.id)
   end
 
   private
