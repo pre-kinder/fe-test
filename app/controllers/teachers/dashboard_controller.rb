@@ -11,14 +11,11 @@ class Teachers::DashboardController < ApplicationController
   def show
   end
 
-  def create
-  end
-
   def edit
   end
 
   def update
-    TeacherFacade.update_teacher_profile(json_body)
+    TeacherFacade.update_teacher_profile(json_body, current_user.email)
     flash[:success] = 'Your profile has been updated!'
     redirect_to teachers_profile_edit_path
   end

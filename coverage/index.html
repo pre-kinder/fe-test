@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-09T14:48:05-06:00">2021-11-09T14:48:05-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-11-10T13:51:55-06:00">2021-11-10T13:51:55-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  81.97%
+  80.28%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.82
+         0.8
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>5</b> files in total.
+    <b>6</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>61</b> relevant lines,
-    <span class="green"><b>50</b> lines covered</span> and
-    <span class="red"><b>11</b> lines missed. </span>
+    <b>71</b> relevant lines,
+    <span class="green"><b>57</b> lines covered</span> and
+    <span class="red"><b>14</b> lines missed. </span>
     (<span class="yellow">
-  81.97%
+  80.28%
 </span>
 )
   </div>
@@ -104,13 +104,24 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#1219d25cfab8c04f2b227a16f55b81e255f02a03" class="src_link" title="app/services/teacher_service.rb">app/services/teacher_service.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">71.43 %</td>
-            <td class="cell--number">13</td>
+            <td class="strong t-file__name"><a href="#dcd372503f177f42ecdb88d17f484efe676b0959" class="src_link" title="app/services/back_end_service.rb">app/services/back_end_service.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#07f69c8fa9e732da7ec680d88cc51efa490ab163" class="src_link" title="app/services/child_service.rb">app/services/child_service.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">58.33 %</td>
+            <td class="cell--number">27</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">7</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.71</td>
+            <td class="cell--number">0.58</td>
             
           </tr>
         
@@ -1148,12 +1159,12 @@
 </div>
 
       
-        <div class="source_table" id="1219d25cfab8c04f2b227a16f55b81e255f02a03">
+        <div class="source_table" id="dcd372503f177f42ecdb88d17f484efe676b0959">
   <div class="header">
-    <h3>app/services/teacher_service.rb</h3>
+    <h3>app/services/back_end_service.rb</h3>
     <h4>
-      <span class="red">
-  71.43%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -1162,9 +1173,9 @@
     
 
     <div class="t-line-summary">
-      <b>7</b> relevant lines.
+      <b>5</b> relevant lines.
       <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -1181,7 +1192,7 @@
 
             
 
-            <code class="ruby">class TeacherService</code>
+            <code class="ruby">class BackEndService</code>
           </li>
         </div>
       
@@ -1192,7 +1203,7 @@
 
             
 
-            <code class="ruby">  def get_one_teacher(google_id)</code>
+            <code class="ruby">  def self.conn</code>
           </li>
         </div>
       
@@ -1203,7 +1214,148 @@
 
             
 
-            <code class="ruby">    response = Faraday.get(&quot;http://localhost:5000/api/v1/teacher?#{google_id}&quot;)</code>
+            <code class="ruby">    Faraday.new(&#39;https://prekinder-api.herokuapp.com&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">    # Faraday.new(&#39;http://localhost:5000&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.parse_json(response)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="07f69c8fa9e732da7ec680d88cc51efa490ab163">
+  <div class="header">
+    <h3>app/services/child_service.rb</h3>
+    <h4>
+      <span class="red">
+  58.33%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>12</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ChildService &lt; BackEndService</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.get_one_child(last_name, birthday)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">    response = conn.get(&quot;/api/v1/child?last_name=#{last_name}&amp;birthday=#{birthday}&quot;)</code>
           </li>
         </div>
       
@@ -1219,13 +1371,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="5">
+            
             
 
             
 
-            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">    parse_json(response)</code>
           </li>
         </div>
       
@@ -1258,7 +1410,7 @@
 
             
 
-            <code class="ruby">  def get_teacher_profile(google_id)</code>
+            <code class="ruby">  def self.get_classroom_children(classroom_id)</code>
           </li>
         </div>
       
@@ -1269,7 +1421,7 @@
 
             
 
-            <code class="ruby">    response = Faraday.get(&quot;http://localhost:5000/api/v1/teacher?#{google_id}&quot;)</code>
+            <code class="ruby">    response = conn.get(&quot;/api/v1/classrooms/#{classroom_id}/children&quot;)</code>
           </li>
         </div>
       
@@ -1291,7 +1443,7 @@
 
             
 
-            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">    parse_json(response)</code>
           </li>
         </div>
       
@@ -1308,6 +1460,160 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.get_parent_children(google_id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    response = conn.get(&quot;/api/v1/parents/#{google_id}/children&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    parse_json(response)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.create_child(child_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">    conn.post(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">      &#39;/api/v1/children&#39;,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">      child_params.to_json,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">      &#39;Content-Type&#39; =&gt; &#39;application/json&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">    )</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
