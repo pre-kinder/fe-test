@@ -1,10 +1,4 @@
 class EventService < BackEndService
-  def self.get_one_event(classroom_id)
-    response = conn.get("/api/v1/event?#{classroom_id}")
-
-    parse_json(response)
-  end
-
   def self.create_event(event_params)
     conn.post(
       '/api/v1/events',

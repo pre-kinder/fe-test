@@ -1,7 +1,7 @@
 {
   "data": {
     "id": "1",
-    "type": "teacher",
+    "type": "parent",
     "attributes": {
       "first_name": "Meg",
       "last_name": "Pintozzi",
@@ -10,7 +10,6 @@
       "phone_number": "1234567890",
       "google_image_url": "url",
       "google_id": "abcdefghijkl123456789",
-      "classroom_id": "1"
     }
   }
 }

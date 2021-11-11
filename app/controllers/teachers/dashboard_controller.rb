@@ -6,6 +6,7 @@ class Teachers::DashboardController < ApplicationController
     else
       flash[:error] = 'Please enter a valid city'
     end
+    @holidays = HolidayFacade.get_holidays
   end
 
   def show
@@ -28,14 +29,8 @@ class Teachers::DashboardController < ApplicationController
     @teacher = TeacherFacade.get_one_teacher(current_user.email)
     @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
     @children = ChildFacade.get_classroom_children(@classroom.id)
-    @events = EventFacade.get_classroom_events(@classroom.id)
   end
 
-  def event_post
-    @teacher = TeacherFacade.get_one_teacher(current_user.email)
-    @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
-    EventFacade.create_event(event_json_body)
-  end
 
   def child_post
     @teacher = TeacherFacade.get_one_teacher(current_user.email)

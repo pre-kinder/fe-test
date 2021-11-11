@@ -15,14 +15,23 @@
 
 <hr style="width:50% length:80%", size="10", color=black><br>
 
-<section id="add-event">
-<h4><strong>Add Event to Classroom</strong></h4><br>
-
-  <%= form_with url: "/teachers/events", method: :post, local: true do |f| %>
-  <%= f.text_field :title, placeholder: "Title" %>
-  <%= f.text_field :date, placeholder: "Date" %>
-  <%= f.text_field :time, placeholder: "Time" %>
-  <%= f.text_field :description, placeholder: "Description" %>
-  <%= f.submit "Create Event" %>
-  <% end %><br><br>
-</section>
+<section id="children">
+  <h4><strong> Current Children</strong><h4><br>
+    <div class="card" style="width: 18rem;" id="current-children" >
+      <div class="card-body">
+      </div>
+      <% if !@children.nil? %>
+        <% @children.each do |child| %>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+               <%= child.first_name %>
+               <%= child.last_name %>
+               <%= child.birthday %>
+            </li>
+          </ul>
+        <% end %>
+      <% else %>
+        <h5>No Children</h5>
+      <% end %>
+ </div>
+</section><br><br>

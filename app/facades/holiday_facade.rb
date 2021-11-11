@@ -1,7 +1,6 @@
 class HolidayFacade
-  def self.get_holidays(timeframe)
-    service = HolidayService.new
-    holiday_data = service.request_api(timeframe)
+  def self.get_holidays
+    holiday_data = HolidayService.request_api
 
     holiday_data[:data].map do |info|
       HolidayInfo.new(info[:attributes])
