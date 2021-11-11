@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/classrooms
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"bca27a8f006a5dafe6db3df12ebd92a4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8b88e5bc-3648-4a9a-8edd-0a883ca1ad38
+      X-Runtime:
+      - '0.002095'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"4","type":"classroom","attributes":{"name":"Room 1
+        Pintozzi Pumas"}},{"id":"5","type":"classroom","attributes":{"name":"Room
+        2 Chipmunks"}},{"id":"6","type":"classroom","attributes":{"name":"Room 3 Frogs"}}]}'
+  recorded_at: Thu, 11 Nov 2021 23:26:14 GMT
+recorded_with: VCR 6.0.0
