@@ -20,7 +20,7 @@ RSpec.describe 'Parents Registration Page' do
     it 'displays new parent form for a new user after logged in with Google' do
       click_on 'New Parent? Register an account here'
 
-      expect(current_path).to eq (new_parent_path)
+      expect(current_path).to eq (parents_new_path)
 
       expect(page).to have_content('Parent Registration Form')
       expect(page).to have_field(:first_name)
@@ -30,8 +30,8 @@ RSpec.describe 'Parents Registration Page' do
       expect(page).to have_field(:address)
     end
 
-    it 'creates new parent' do
-      visit new_parent_path
+    it 'creates new parent', :vcr do
+      visit parents_new_path
 
       fill_in :first_name, with: @parent.first_name
       fill_in :last_name, with: @parent.last_name

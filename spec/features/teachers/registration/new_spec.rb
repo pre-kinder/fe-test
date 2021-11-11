@@ -17,7 +17,7 @@ RSpec.describe 'Teacher Registration Page' do
   end
 
   describe "teacher registration" do
-    it 'displays new teacher form for a new user after logged in with Google' do
+    it 'displays new teacher form for a new user after logged in with Google', :vcr do
       click_on 'New Teacher? Register an account here'
 
       visit teachers_register_path
@@ -31,14 +31,14 @@ RSpec.describe 'Teacher Registration Page' do
     end
   end
 
-  it 'creates new teacher' do
+  it 'creates new teacher', :vcr do
     visit teachers_register_path
 
-    fill_in :first_name, with: @teacher.first_name
-    fill_in :last_name, with: @teacher.last_name
-    fill_in :email, with: @teacher.email
-    fill_in :phone_number, with: @teacher.phone_number
-    fill_in :address, with: @teacher.address
+    fill_in :first_name, with: 'David'
+    fill_in :last_name, with: 'Davidson'
+    fill_in :email, with: 'David@gmail.com'
+    fill_in :phone_number, with: '1234567890'
+    fill_in :address, with: '123 Main St, Denver, CO, 80001'
 
     click_on "Create Profile"
 
@@ -46,14 +46,14 @@ RSpec.describe 'Teacher Registration Page' do
     expect(page).to have_content('Account has been successfully created!')
   end
 
-  it 'throws an error when missing fields' do
+  it 'throws an error when missing fields', :vcr do
     visit teachers_register_path
 
-    fill_in :first_name, with: @teacher.first_name
-    fill_in :last_name, with: ''
-    fill_in :email, with: @teacher.email
-    fill_in :phone_number, with: @teacher.phone_number
-    fill_in :address, with: ''
+    fill_in :first_name, with: ''
+    fill_in :last_name, with: 'Davidson'
+    fill_in :email, with: 'David@gmail.com'
+    fill_in :phone_number, with: '1234567890'
+    fill_in :address, with: '123 Main St, Denver, CO, 80001'
 
     click_on "Create Profile"
 

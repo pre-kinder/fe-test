@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe TeacherService do
   xit 'returns one teacher', :vcr do
-    request = TeacherService.get_one_teacher("vincenzo_volkman@johnston.net")
+    email = "ruthie@mohr.org"
+    request = TeacherService.get_one_teacher(email)
 
     expect(request).to be_a(Hash)
     expect(request[:data]).to have_key(:id)
