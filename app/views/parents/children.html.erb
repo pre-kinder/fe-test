@@ -1,1 +1,11 @@
 <h4>My Children:</h4>
+<br><br>
+
+<% if !@children.nil? %>
+  <% @children.each do |child| %>
+    <h5><%= child.first_name %> <%= child.last_name %></h5>
+    <p> Birthday: <%= child.birthday %></p>
+  <% end %>
+<% else %>
+  <p>No Children Found</p>
+<% end %> 
