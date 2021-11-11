@@ -93,6 +93,6 @@ RSpec.describe TeacherService do
 
     request = TeacherService.update_teacher_profile(teacher_params, mock_google_id)
 
-
+    expect(request).to have_status(200)
   end
 end

@@ -20,8 +20,7 @@ class ChildService < BackEndService
   def self.create_child(child_params)
     conn.post(
       '/api/v1/children',
-      child_params.to_json,
-      'Content-Type' => 'application/json'
+      child_params
     )
   end
 end
