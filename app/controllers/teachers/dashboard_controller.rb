@@ -12,6 +12,7 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def edit
+    @classrooms = ClassroomFacade.get_all_classrooms
   end
 
   def update
@@ -59,7 +60,7 @@ class Teachers::DashboardController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       birthday: params[:birthday],
-      classroom_id: @classroom.id
+      classroom_id: @classroom.id,
     }
   end
 
