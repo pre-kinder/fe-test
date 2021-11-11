@@ -2,7 +2,6 @@ class ParentService < BackEndService
 
   def self.get_one_parent(email)
     response = conn.get("/api/v1/parents/find?email=#{email}")
-
     parse_json(response)
   end
 

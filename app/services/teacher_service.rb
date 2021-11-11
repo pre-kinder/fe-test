@@ -2,7 +2,6 @@ class TeacherService < BackEndService
 
   def self.get_one_teacher(email)
     response = conn.get("/api/v1/teachers/find?email=#{email}")
-
     parse_json(response)
   end
 

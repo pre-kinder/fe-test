@@ -33,7 +33,7 @@
       <%= f.text_area :address, cols: 40, id: :address, class: "form-custom center-it-all" %>
 
       <h5><%= f.label :class_room, 'Class Room:' %></h5>
-      <%= f.select :class_room, [@classrooms.first.name, @classrooms.second.name, @classrooms.third.name], class: "form-custom center-it-all" %>
+      <%= f.select :class_room, [@classrooms.first.id, @classrooms.second.id, @classrooms.third.id], class: "form-custom center-it-all" %>
 
       <br><br><br>
 
