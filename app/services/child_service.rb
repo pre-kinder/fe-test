@@ -1,10 +1,4 @@
 class ChildService < BackEndService
-  # def self.get_one_child(last_name, birthday)
-  #   response = conn.get("/api/v1/child?last_name=#{last_name}&birthday=#{birthday}")
-  #
-  #   parse_json(response)
-  # end
-
   def self.get_classroom_children(classroom_id)
     response = conn.get("/api/v1/classrooms/#{classroom_id}/children")
 

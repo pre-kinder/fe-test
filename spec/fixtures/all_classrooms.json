@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": "1",
+        "type": "classroom",
+        "attributes": {
+          "name": "cohort 2105"
+        }
+    },
+    {
+      "id": "2",
+      "type": "classroom",
+      "attributes": {
+        "name": "cohort 2107"
+      }
+    },
+    {
+      "id": "3",
+      "type": "classroom",
+      "attributes": {
+        "name": "cohort 2108"
+      }
+    }
+  ]
+}

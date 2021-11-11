@@ -1,4 +1,5 @@
 class TeacherService < BackEndService
+
   def self.get_one_teacher(email)
     response = conn.get("/api/v1/teachers/find?#{email}")
 
@@ -14,6 +15,7 @@ class TeacherService < BackEndService
 
   def self.update_teacher_profile(teacher_params, teacher_id)
     conn.patch(
+
       "/api/v1/teachers/#{teacher_id}",
        teacher_params
     )
