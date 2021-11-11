@@ -13,7 +13,7 @@ class ParentsController < ApplicationController
   def create
     if current_user.update(downcased_parent_params)
       session[:user_id] = current_user.id
-      ParentFacade.post_parent_to_api(json_body)
+      ParentFacade.post_parent(json_body)
       redirect_to parents_path
       flash[:success] = 'Account has been successfully created!'
     else
