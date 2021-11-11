@@ -7,7 +7,7 @@ RSpec.describe ParentService do
     request = ParentService.get_one_parent(email)
 
     expect(request).to be_a(Hash)
-    expect(request[:data]).to be_an(Array)
+    expect(request[:data]).to be_a(Hash)
     expect(request[:data]).to have_key(:id)
     expect(request[:data][:id]).to be_a(String)
 

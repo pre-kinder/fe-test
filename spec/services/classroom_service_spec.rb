@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe ClassroomService do
   it 'returns one classroom', :vcr do
     classroom_id = 1
-
+    
     request = ClassroomService.get_one_classroom(classroom_id)
 
     expect(request).to be_a(Hash)

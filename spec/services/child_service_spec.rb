@@ -59,7 +59,6 @@ RSpec.describe ChildService do
                       birthday: "2015-06-06",
                       parent_id: 1,
                       classroom_id: 1
-
     }
     request = ChildService.create_child(child_params)
     expect(request.status).to eq(201)
