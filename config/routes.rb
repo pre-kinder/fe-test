@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/parents/children', to: 'parents#children', as: 'parent_children'
   get '/parents/edit', to: 'parents#edit'
+  patch '/parents/edit', to: 'parents#update'
   get '/parents/new', to: 'parents#new'
   post '/parents/new', to: 'parents#create'
   get '/parents', to: 'parents#index'
@@ -26,7 +27,9 @@ Rails.application.routes.draw do
     get '/profile/edit', to: 'dashboard#edit'
     patch '/profile/edit', to: 'dashboard#update'
     get '/classroom', to: 'dashboard#classroom'
-    get '/attendance', to: 'dashboard#attendance'
+    #get '/attendance', to: 'dashboard#attendance'
+    post '/classroom/events', to: 'dashboard#event_post'
+    post '/classroom/children', to: 'dashboard#children_post'
   end
 
 end

@@ -13,7 +13,7 @@ class ParentsController < ApplicationController
   def create
     if current_user.update(downcased_parent_params)
       session[:user_id] = current_user.id
-      ParentFacade.post_parent(downcased_parent_params)
+      ParentFacade.post_parent_to_api(json_body)
       redirect_to parents_path
       flash[:success] = 'Account has been successfully created!'
     else
@@ -27,14 +27,34 @@ class ParentsController < ApplicationController
   end
 
   def edit
-    #@parent = ParentFacade.get_one_parent(current_user.google_id)
+
+  end
+
+  def update
+    ParentFacade.update_parent_profile(json_body, current_user.email)
+    flash[:success] = 'Your profile has been updated!'
+    redirect_to '/parents/edit'
   end
 
   def children
-    #@children = ParentFacade.get_all_children(current_user.google_id)
+    @parent = ParentFacade.request_api(current_user.email)
+    @children = ChildFacade.get_parent_children(@parent.id)
   end
 
   private
+
+  def json_body
+    body = {
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      phone_number: params[:phone_number],
+      address: params[:address],
+      role: params[:role],
+      google_id: current_user.google_id,
+      google_image_url: current_user.google_image_url
+    }
+  end
 
   def parent_params
     params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id, :google_image_url, :role)
