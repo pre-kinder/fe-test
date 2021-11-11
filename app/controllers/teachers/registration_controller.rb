@@ -1,6 +1,6 @@
 class Teachers::RegistrationController < ApplicationController
   def new
-    #@classrooms = ClassroomFacade.get_all_classrooms
+    @classrooms = ClassroomFacade.get_all_classrooms
   end
 
   def edit
@@ -31,7 +31,7 @@ class Teachers::RegistrationController < ApplicationController
       google_id: current_user.google_id,
       google_image_url: current_user.google_image_url
     }
-  end 
+  end
 
   def teacher_params
     params.permit(:first_name, :last_name, :email, :phone_number, :address, :google_id, :google_image_url, :role)

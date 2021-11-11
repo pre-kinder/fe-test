@@ -12,6 +12,7 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def edit
+    @classrooms = ClassroomFacade.get_all_classrooms
   end
 
   def update
