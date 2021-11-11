@@ -5,6 +5,7 @@ class ParentsController < ApplicationController
     else
       flash[:error] = 'Please enter a valid city'
     end
+  @holidays = HolidayFacade.get_holidays
   end
 
   def new

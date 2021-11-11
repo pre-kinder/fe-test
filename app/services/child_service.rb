@@ -11,8 +11,8 @@ class ChildService < BackEndService
     parse_json(response)
   end
 
-  def self.get_parent_children(google_id)
-    response = conn.get("/api/v1/parents/#{google_id}/children")
+  def self.get_parent_children(id)
+    response = conn.get("/api/v1/parents/#{id}/children")
 
     parse_json(response)
   end
