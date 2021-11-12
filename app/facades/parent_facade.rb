@@ -6,7 +6,7 @@ class ParentFacade
   end
 
   def self.post_parent(parent_params)
-    ParentService.post_parent_to_api(parent_params)
+    ParentService.create_parent(parent_params)
   end
 
   def self.get_all_parents
