@@ -9,6 +9,7 @@
   <%= f.text_field :first_name, placeholder: "First Name" %>
   <%= f.text_field :last_name, placeholder: "Last Name" %>
   <%= f.text_field :birthday, placeholder: "Birthday" %>
+  <%= f.select :parent, @parents.each {|parent|parent.email}, class: "form-custom-center-it-all" %>
   <%= f.submit "Add Child" %>
   <% end %><br><br>
 </section>

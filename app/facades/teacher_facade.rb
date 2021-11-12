@@ -1,7 +1,7 @@
 class TeacherFacade
-  def self.get_one_teacher(google_id)
-    teacher = TeacherService.get_one_teacher(google_id)
-    Teacher.new(teacher[:data][:attributes])
+  def self.get_one_teacher(email)
+    teacher = TeacherService.get_one_teacher(email)
+    Teacher.new(teacher[:data][0])
   end
 
   def self.create_teacher(params)
@@ -10,6 +10,5 @@ class TeacherFacade
 
   def self.update_teacher_profile(params, google_id)
     teacher = TeacherService.update_teacher_profile(params, google_id)
-    Teacher.new(teacher[:data][:attributes])
   end
 end

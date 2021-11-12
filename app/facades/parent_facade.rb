@@ -8,4 +8,15 @@ class ParentFacade
   def self.post_parent(parent_params)
     ParentService.post_parent_to_api(parent_params)
   end
+
+  def self.get_all_parents
+    parent_data = ParentService.get_all_parents
+
+    parent_data.map do |data|
+      data[1].map do |parent|
+        Parent.new(parent)
+      end
+    end
+  end
+
 end
