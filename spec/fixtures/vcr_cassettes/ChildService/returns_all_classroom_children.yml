@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/classrooms/1/children
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"471576d5e14f4f465b2a3cb471424695"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4580c0d7-9178-4912-9cac-2ab30be2b237
+      X-Runtime:
+      - '0.119311'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"children","attributes":{"first_name":"Darren","last_name":"Larkin","birthday":"2018-06-11","parent_id":1,"classroom_id":1}},{"id":"2","type":"children","attributes":{"first_name":"Ingeborg","last_name":"Fahey","birthday":"2017-08-06","parent_id":2,"classroom_id":1}}]}'
+  recorded_at: Thu, 11 Nov 2021 22:28:19 GMT
+recorded_with: VCR 6.0.0

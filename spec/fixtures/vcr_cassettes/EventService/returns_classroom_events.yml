@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/classrooms/1/events
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"af0c7ad0f5bf88e17b1696fd6b3accab"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3fd187c3-136f-45b2-abb8-de39ab71f395
+      X-Runtime:
+      - '0.031134'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"event","attributes":{"title":"[\"cumque\",
+        \"quam\", \"nihil\"]","description":"[\"Quisquam assumenda impedit. Esse sunt
+        qui. Fugiat eum quam.\"]","date":"2021-07-13","time":"2000-01-01T19:42:00.000Z","classroom_id":1}}]}'
+  recorded_at: Thu, 11 Nov 2021 22:28:32 GMT
+recorded_with: VCR 6.0.0

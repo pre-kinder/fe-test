@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/parents/1/children
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3246ba4acf0c7bcce836860991c971c4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7ae07609-d9e5-4942-9302-55b9b6cc02cc
+      X-Runtime:
+      - '0.023755'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"children","attributes":{"first_name":"Darren","last_name":"Larkin","birthday":"2018-06-11","parent_id":1,"classroom_id":1}}]}'
+  recorded_at: Thu, 11 Nov 2021 22:28:19 GMT
+recorded_with: VCR 6.0.0

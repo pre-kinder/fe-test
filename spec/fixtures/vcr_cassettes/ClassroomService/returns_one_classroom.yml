@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/classrooms/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"23ed1ad7aed1c8f485b6a1f654cde40f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4a6c39ec-75e5-4668-b93e-ba67451a2e8b
+      X-Runtime:
+      - '0.007914'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"classroom","attributes":{"name":"Zoom 1 Pintozzi
+        Pumas"}}}'
+  recorded_at: Thu, 11 Nov 2021 22:28:28 GMT
+recorded_with: VCR 6.0.0
