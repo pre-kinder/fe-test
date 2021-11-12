@@ -5,15 +5,18 @@ class Teacher
               :phone_number,
               :google_id,
               :classroom_id,
-              :google_image_url
+              :google_image_url,
+              :id
 
   def initialize(response)
-    @first_name = response[:first_name]
-    @last_name = response[:last_name]
-    @email = response[:email]
-    @phone_number = response[:phone_number]
-    @google_id = response[:google_id]
-    @classroom_id = response[:classroom_id]
-    @google_image_url = response[:google_image_url]
+    @first_name = response[:attributes][:first_name]
+    @last_name = response[:attributes][:last_name]
+    @email = response[:attributes][:email]
+    @phone_number = response[:attributes][:phone_number]
+    @address = response[:attributes][:address]
+    @google_id = response[:attributes][:google_id]
+    @classroom_id = response[:attributes][:classroom_id]
+    @google_image_url = response[:attributes][:google_image_url]
+    @id = response[:id]
   end
 end

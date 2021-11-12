@@ -1,6 +1,6 @@
 class Teachers::RegistrationController < ApplicationController
   def new
-    @classrooms = ClassroomFacade.get_all_classrooms
+    @classrooms = ClassroomFacade.get_all_classrooms.flatten
   end
 
   def edit
@@ -9,7 +9,7 @@ class Teachers::RegistrationController < ApplicationController
   def create
     if current_user.update(downcased_teacher_params)
       session[:user_id] = current_user.id
-      TeacherFacade.post_teacher(json_body)
+      TeacherFacade.create_teacher(json_body)
       redirect_to teachers_dashboard_path
       flash[:success] = 'Account has been successfully created!'
     else

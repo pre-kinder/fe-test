@@ -6,16 +6,18 @@ class Parent
               :phone_number,
               :google_id,
               :google_image_url,
-              :role
+              :role,
+              :id
 
   def initialize(response)
-    @first_name = response[:first_name]
-    @last_name = response[:last_name]
-    @email = response[:email]
-    @address = response[:address]
-    @phone_number = response[:phone_number]
-    @google_id = response[:google_id]
-    @google_image_url = response[:google_image_url]
-    @role = response[:role]
+    @first_name = response[:attributes][:first_name]
+    @last_name = response[:attributes][:last_name]
+    @email = response[:attributes][:email]
+    @address = response[:attributes][:address]
+    @phone_number = response[:attributes][:phone_number]
+    @google_id = response[:attributes][:google_id]
+    @google_image_url = response[:attributes][:google_image_url]
+    @role = response[:attributes][:role]
+    @id = response[:id]
   end
 end

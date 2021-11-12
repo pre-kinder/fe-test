@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/classrooms
+    uri: http://localhost:5000/api/v1/parents/find?email=lucy@gmail.com
     body:
       encoding: US-ASCII
       string: ''
@@ -21,19 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7105c15ebec2d8f54612177c2a80a3ca"
+      - W/"47d60b600077866a67a9f803b568e20f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8fe392d1-1b8a-44d8-b83d-759b90eb1f01
+      - 542b6e3e-6c04-40eb-a5f9-093a73af5acc
       X-Runtime:
-      - '0.002573'
+      - '0.020928'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"4","type":"classroom","attributes":{"name":"Room 1
-        Pintozzi Pumas"}},{"id":"5","type":"classroom","attributes":{"name":"Room
-        2 Chipmunks"}},{"id":"6","type":"classroom","attributes":{"name":"Room 3 Frogs"}}]}'
-  recorded_at: Thu, 11 Nov 2021 23:26:15 GMT
+      string: '{"data":[{"id":"6","type":"parent","attributes":{"first_name":"Lucy","last_name":"Loo","email":"lucy@gmail.com","address":"123
+        Main St Denver, CO 37278","phone_number":"123-455-6677","google_image_url":"2368ihefndskzsaudfd89djfasf","google_id":"27494238520"}}]}'
+  recorded_at: Thu, 11 Nov 2021 23:25:52 GMT
 recorded_with: VCR 6.0.0

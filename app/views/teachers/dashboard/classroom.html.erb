@@ -5,10 +5,16 @@
 <section id="add-child">
 <h4><strong>Add Child to Classroom</strong></h4><br>
 
+<% @array = [] %>
+<% @parents.each do |parent| %>
+<% @array << parent.email %>
+<% end %>
+
   <%= form_with url: "/teachers/children", method: :post, local: true do |f| %>
   <%= f.text_field :first_name, placeholder: "First Name" %>
   <%= f.text_field :last_name, placeholder: "Last Name" %>
   <%= f.text_field :birthday, placeholder: "Birthday" %>
+  <%= f.select :parent, @array , class: "form-custom-center-it-all" %>
   <%= f.submit "Add Child" %>
   <% end %><br><br>
 </section>
