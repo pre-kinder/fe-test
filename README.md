@@ -193,7 +193,7 @@ The following section displays a comparison of our vision and how our vision cam
   </td>
 
   <td style = 'width:45%'>
-    <img src="https://user-images.githubusercontent.com/78382113/140091388-97ca23af-9d19-4bb9-aaa5-49765d80d8f4.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141501956-698e9515-a355-425f-a090-8e690e8755aa.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -212,7 +212,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140091891-cb529033-c205-44f1-9b20-80ecdea24088.png" style="height:225px">
   </td>
   <td style = 'width:45%'>
-    <img src="https://user-images.githubusercontent.com/78382113/140091891-cb529033-c205-44f1-9b20-80ecdea24088.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141501606-e8604912-f271-4764-81e1-693885ad1d64.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -230,7 +230,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140098713-e7f203bd-2f79-4329-8f7d-2b9ee7a8d787.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/78382113/140098713-e7f203bd-2f79-4329-8f7d-2b9ee7a8d787.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141501643-86daa3a4-117a-4260-9034-6cad1c5ab98b.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -248,7 +248,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140098866-a36e8226-353e-431f-8558-dea06e386602.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/78382113/140098866-a36e8226-353e-431f-8558-dea06e386602.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141502519-42790196-c71d-420f-8934-c93c63403af8.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -266,7 +266,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140098590-4575512c-f53e-450f-a734-fbd1b2fc64d1.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/78382113/140098590-4575512c-f53e-450f-a734-fbd1b2fc64d1.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141502602-5b460333-fff3-4e44-9c4a-9cf13ba3c2fe.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -284,7 +284,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140098960-d11c5d4b-d409-43c1-87e5-5b6dc38306b6.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/78382113/140098960-d11c5d4b-d409-43c1-87e5-5b6dc38306b6.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141502620-faaab370-d329-4364-829b-421f4d9f49c1.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -320,7 +320,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140099516-65636c51-7060-48f8-ae41-5726f03a8313.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/78382113/140099516-65636c51-7060-48f8-ae41-5726f03a8313.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141503006-f2e46890-7b5e-4a6a-abc2-8d7a101fa399.png" style="height:225px">
   </td>
 </tr>
 </table>
@@ -338,7 +338,7 @@ The following section displays a comparison of our vision and how our vision cam
     <img src="https://user-images.githubusercontent.com/78382113/140099244-5dd5ca3f-501b-4bff-b6b5-fcd0d59bd0b4.png" style="height:225px">
   </td>
   <td style = 'width:45%'>  
-    <img src="https://user-images.githubusercontent.com/78382113/140099244-5dd5ca3f-501b-4bff-b6b5-fcd0d59bd0b4.png" style="height:225px">
+    <img src="https://user-images.githubusercontent.com/76824096/141503086-aad261ce-05a5-47da-aa3b-cb803b6a9434.png" style="height:225px">
   </td>
 </tr>
 </table>
