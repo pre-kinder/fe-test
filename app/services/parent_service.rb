@@ -22,9 +22,6 @@ class ParentService < BackEndService
   end
 
   def self.update_parent_profile(parent_params, parent_id)
-    conn.patch(
-      "/api/v1/parents/#{parent_id}",
-       parent_params,
-     )
+    conn.patch("/api/v1/parents/#{parent_id}", parent_params)
   end
 end
