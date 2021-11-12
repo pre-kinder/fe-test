@@ -13,7 +13,7 @@ class Teachers::DashboardController < ApplicationController
   end
 
   def edit
-    @classrooms = ClassroomFacade.get_all_classrooms
+    @classrooms = ClassroomFacade.get_all_classrooms.flatten
   end
 
   def update
@@ -29,13 +29,15 @@ class Teachers::DashboardController < ApplicationController
     @teacher = TeacherFacade.get_one_teacher(current_user.email)
     @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
     @children = ChildFacade.get_classroom_children(@classroom.id)
+    @parents = ParentFacade.get_all_parents.flatten
   end
 
 
-  def child_post
+  def children_post
     @teacher = TeacherFacade.get_one_teacher(current_user.email)
     @classroom = ClassroomFacade.get_one_classroom(@teacher.classroom_id)
     ChildFacade.create_child(child_json_body)
+    @parent = ParentFacade.get_one_parent(params[:parent])
   end
 
   private
@@ -56,6 +58,7 @@ class Teachers::DashboardController < ApplicationController
       last_name: params[:last_name],
       birthday: params[:birthday],
       classroom_id: @classroom.id,
+      parent_id: @parent.id
     }
   end
 

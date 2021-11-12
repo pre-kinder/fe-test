@@ -1,6 +1,6 @@
 class Teachers::RegistrationController < ApplicationController
   def new
-    @classrooms = ClassroomFacade.get_all_classrooms
+    @classrooms = ClassroomFacade.get_all_classrooms.flatten
   end
 
   def edit
