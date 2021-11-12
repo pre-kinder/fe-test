@@ -9,6 +9,6 @@
 
     <div class="center">
       <%= link_to 'New Teacher? Register an account here', teachers_register_path, { id: current_user.id } %><br><br>
-    <%= link_to 'New Parent? Register your account here', '/parents/new', {:action=>"new", :controller=>"parents", id: current_user.id} %>
+    <%= link_to 'New Parent? Register an account here', '/parents/new', {:action=>"new", :controller=>"parents", id: current_user.id} %>
   </div>
 </div>
